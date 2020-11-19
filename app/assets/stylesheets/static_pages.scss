@@ -1,3 +1,47 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.splashNav{
+    background-color:rgba(38, 38, 38, 0.56);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    z-index: 999;
+}
+.signup-signout{
+    padding-right: 35px;
+}
+
+
+.signupSplash-btn{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 6px 20px;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+
+}
+.signupSplash-btn:hover{
+ color: gray;
+}
+
+.loginSplash-btn{
+    color: white;
+    text-decoration: none;
+}
+
+.DreamerLogo{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    padding-left: 38px;
+    font-family: Proxima Nova;
+}

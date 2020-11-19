@@ -1,0 +1,19 @@
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    background-color: #000000;
+    font-size: 15px;
+    bottom: 0;
+  }
+
+.react-icons:hover{
+  color: whitesmoke;
+}  
+.react-icons{
+  color: grey;
+}  
