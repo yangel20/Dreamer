@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LoginForm extends React.Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,35 +36,40 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Dreamer!
-          <br/>
-          {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
-      </div>
+      <>
+        <div className="session-form-container">
+            <form onSubmit={this.handleSubmit} className="session-form-box">
+              <h4 className="session-title">Welcome to Dreamer!</h4>
+              <br/>
+              {this.renderErrors()}
+              <div className="session-form">
+                <br/>
+                <label className="Username">
+                  <input type="text"
+                    value={this.state.username}
+                    onChange={this.update('username')}
+                    className="session-input"
+                    placeholder="Username"
+                  />
+                </label>
+                <br/>
+                <label className="Password">
+                  <input type="password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className="session-input"
+                    placeholder="Password"
+                  />
+                </label>
+                <br/>
+                <input className="session-submit" type="submit" value={this.props.formType} />
+              </div>
+            </form>
+        </div>
+        <div className="session-bg"></div>
+      </>
     );
   }
 }
 
-export default LoginForm;
+export default Login;

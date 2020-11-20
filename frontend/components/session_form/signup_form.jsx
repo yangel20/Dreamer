@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconContext } from 'react-icons/lib';
 
 class SignupForm
  extends React.Component {
@@ -38,41 +39,48 @@ class SignupForm
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Dreamer!
-          <br/>
-          {this.renderErrors()}
-          <div className="login-form">
+      <>
+        <div className="session-form-container">
+          <form onSubmit={this.handleSubmit} className="session-form-box">
+            
+            <div className="session-title">Sign up to view dreams</div>
             <br/>
-            <label>Email:
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            <br/>
+            {this.renderErrors()}
+            <div className="session-form">
+              <br/>
+              <label className="Email">
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  className="session-input"
+                  placeholder="Email"
+                />
+              <br/>
+                </label>
+              <label className="Username">
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.update('username')}
+                  className="session-input"
+                  placeholder="Username"
+                />
               </label>
-            <label>Username:
-              <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
-        </form>
-      </div>
+              <br/>
+              <label className="Password">
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  className="session-input"
+                  placeholder="Password"
+                />
+              </label>
+              <br/>
+              <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+          </form>
+        </div>
+        <div className="session-bg"></div>
+      </>
     );
   }
 }

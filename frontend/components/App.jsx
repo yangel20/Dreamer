@@ -1,6 +1,6 @@
 
 import React from "react";
-import SplashContainer from "./splash_container";
+import Navbar from "./navbar_container";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 
@@ -16,8 +16,9 @@ import Footer from "./footer";
 const App = () => (
   <div>
     <header>
+      {/* <navbar/> */}
         {/* <h1 className="intro">Dreamer</h1> */}
-        <SplashContainer />
+        <Navbar />
         {/* //nav bar  */}
         {/* //splash page that has everthing but nav bar */}
     </header>
@@ -26,7 +27,6 @@ const App = () => (
         <Route path="/signup" component={SignupFormContainer} />
     </Switch>
     <Footer />
-    {/* fotert */}
   </div>
 );
 

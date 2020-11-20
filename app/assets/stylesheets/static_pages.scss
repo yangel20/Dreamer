@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.splashNav{
+//nav logged out
+.not-login-nav{
     background-color:rgba(38, 38, 38, 0.56);
     display: flex;
     justify-content: space-between;
@@ -26,8 +26,8 @@
     font-size: 16px;
     border-radius: 8px;
     font-weight: 600;
-
 }
+
 .signupSplash-btn:hover{
  color: gray;
 }
@@ -44,4 +44,42 @@
     font-size: 22px;
     padding-left: 38px;
     font-family: Proxima Nova;
+}
+//--------------------------------------------------------------------
+//nav loggen in
+
+.logged-in-nav{
+    background-color:rgba(38, 38, 38, 0.56);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    z-index: 999;
+}
+
+.header-button{
+    background-color: rgb(221, 200, 80);
+    border: none;
+    color: black;
+    padding: 6px 20px;
+    text-decoration: none;
+    // display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 600;
+
+}
+//-------------------------------------------------------
+//backround
+.session-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    z-index: -1;
+    background-image: url("img3.jpg")
 }

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../actions/session_action';
-import splash from './splash';
+import Navbar from './navbar';
 
 const mSTP = ({ session, entities: { users } }) => {
   return {
@@ -13,4 +13,4 @@ const mDTP = dispatch => ({
   logout: () => dispatch(logout())
 });
 
-export default connect(mSTP, mDTP)(splash);
+export default connect(mSTP, mDTP)(Navbar);
