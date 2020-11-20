@@ -1,0 +1,41 @@
+.splash-page{
+    display: flex;
+    font-size: 56px;
+    font-family: helvetica, arial, sans-serif;
+    color: white;
+    text-align: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+
+
+.splash-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    z-index: -1;
+    max-width: auto;
+    margin: auto;
+    
+    animation: moving 40s ease-in-out infinite;
+
+}
+
+
+
+
+@keyframes moving{
+    0%{ background-image: image-url('splash_img/img1.jpg');}
+    16%{ background-image: image-url('splash_img/img2.jpg');}
+    32%{ background-image: image-url('splash_img/img8.png');}
+    48%{ background-image: image-url('splash_img/img4.jpeg');}
+    64%{background-image: image-url('splash_img/img5.jpeg');}
+    80%{background-image: image-url('splash_img/img6.jpeg');}
+    100%{background-image: image-url('splash_img/img7.jpeg');}
+}

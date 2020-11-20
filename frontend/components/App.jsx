@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./navbar_container";
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
-
+import SplashContainer from "./splash/splash_container"
 import {
     Route,
     Redirect,
@@ -12,6 +12,7 @@ import {
     HashRouter
   } from 'react-router-dom';
 import Footer from "./footer";
+;
 
 const App = () => (
   <div>
@@ -25,6 +26,7 @@ const App = () => (
     <Switch>
         <Route path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
+        <Route exact path="/" component={SplashContainer} />
     </Switch>
     <Footer />
   </div>
