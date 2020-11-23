@@ -12,6 +12,7 @@ import {
     HashRouter
   } from 'react-router-dom';
 import Footer from "./footer";
+import PhotoIndex from "./explore/photo_index_container";
 ;
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
         {/* //splash page that has everthing but nav bar */}
     </header>
     <Switch>
+        <Route path="/explore" component={PhotoIndex} />
         <Route path="/login" component={LoginFormContainer} />
         <Route path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={SplashContainer} />

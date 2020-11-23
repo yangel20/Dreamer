@@ -1,15 +1,32 @@
 import React from 'react';
 
-const Splash = () => {
-  return(
-    <>
-      <div className="splash-page">
-        <h1>☁️</h1>
-        <h1>Find Your Dreams</h1>
-      </div>
+class Splash extends React.Component { //classical componet // pre
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const demo = {username:"demo", password:"password17"};
+    this.props.processForm(demo);
+  }
+  
+
+  render() {
+    return(
+    <>  
+      <form className="splash-page" onSubmit={this.handleSubmit} >
+          <h1 className="splash-header">Find Your Dreams</h1>
+          <h3 className="splash-h3">Join the Dreamers community, home to a place where peaple share their Dreams.</h3>
+          <button className="demo-button" >demo</button>
+      </form>
       <div className="slide-background"></div>
-    </>
-   )
-}
+    </>)
+  };
+
+
+};
 
 export default Splash;

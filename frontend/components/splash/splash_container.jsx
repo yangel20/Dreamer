@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Splash from './splash';
-import { logout } from '../../util/session_api_util';
+import { logout, login } from '../../actions/session_action';
 
 const mSTP = ({ session, entities: { users } }) => {
   return {
@@ -9,7 +9,8 @@ const mSTP = ({ session, entities: { users } }) => {
 };
 
 const mDTP = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  processForm: (user) => dispatch(login(user))
 });
 
 
