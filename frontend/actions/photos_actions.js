@@ -20,6 +20,7 @@ export const receiveAllPhotos = ({photos, users}) => ({
 export const fetchAllPhotos = () => dispatch => (
     APIUtil.fetchAllPhotos().then(payload => (
         dispatch(receiveAllPhotos(payload))
+        
     ))     
 );
 
