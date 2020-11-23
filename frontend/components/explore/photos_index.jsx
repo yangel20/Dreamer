@@ -25,17 +25,11 @@ class PhotoIndex extends React.Component {
         
         return (
             <div>
-                {/* { this.props.photos.length > 0 ? 
-                
-                (<img src={allPhotos[0].pictureUrl} /> ): "not working"} */}
+               
                 {allPhotos}
 
 
-                {/* <img src={allPhotos[0].pictureUrl} />  */}
-                {/* <span>{this.props.photos.pictureUrl}</span>
-                <img src={this.props.photos.pictureUrl} /> */}
-                {/* <li>{this.props}</li> */}
-                {/* <h1>yerrrrrr</h1> */}
+                
                 
             </div>
         )

@@ -10,3 +10,9 @@
 User.create(username:"demo", password:"password17", email:"demo@aa.com")
 
 Photo.create(title:"test1", description:"this is a test", user_id: 1)
+
+john = User.create(username:"john", password:"password17", email:"john@aa.com")
+
+jessica = User.create(username:"jessica", password:"password17", email:"jessica@aa.com")
+
+eric = User.create(username:"eric", password:"password17", email:"eric@aa.com")
