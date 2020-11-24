@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Splash extends React.Component { //classical componet // pre
+class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);

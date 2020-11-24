@@ -20,16 +20,13 @@ class PhotoIndex extends React.Component {
         // const allPhotos = this.props.photos;
 
         const allPhotos = this.props.photos.map(photo => {
-            return <img src={photo.pictureUrl} key={photo.id} />
+            return <img className={photo.id} src={photo.pictureUrl} key={photo.id}/>
         })
         
         return (
-            <div>
+            <div className="photos-conatainer">
                
                 {allPhotos}
-
-
-                
                 
             </div>
         )

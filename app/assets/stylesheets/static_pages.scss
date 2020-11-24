@@ -17,15 +17,16 @@
 
 
 .signupSplash-btn{
-    background-color: white;
+    background-color: rgb(60, 136, 204);
     border: none;
-    color: black;
+    color: white;
     padding: 6px 20px;
     text-decoration: none;
     // display: inline-block;
     font-size: 16px;
     border-radius: 8px;
     font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .signupSplash-btn:hover{
@@ -35,6 +36,7 @@
 .loginSplash-btn{
     color: white;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .DreamerLogo{

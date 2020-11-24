@@ -4,7 +4,7 @@ import {  } from 'react-icons/fa';
 
 
 
-const navbar = ({ currentUser, logout }) => { // name splash as navbar
+const navbar = ({ currentUser, logout }) => {
   const navLoggedOut = () => (
     <nav className="not-login-nav"> 
       <Link className="DreamerLogo" to="/">Dreamer</Link>
@@ -15,7 +15,7 @@ const navbar = ({ currentUser, logout }) => { // name splash as navbar
         </div>
     </nav>
   );
-  const navLoggedIn = () => ( // nav bar when logged in
+  const navLoggedIn = () => (
     <nav className="logged-in-nav">
       <Link className="DreamerLogo" to="/">Dreamer</Link>
       <h2 className="header-name">Hello, {currentUser.username}!</h2>

@@ -13,6 +13,7 @@ import {
   } from 'react-router-dom';
 import Footer from "./footer";
 import PhotoIndex from "./explore/photo_index_container";
+import { AuthRoute } from "../util/routes_util";
 ;
 
 const App = () => (
@@ -26,9 +27,9 @@ const App = () => (
     </header>
     <Switch>
         <Route path="/explore" component={PhotoIndex} />
-        <Route path="/login" component={LoginFormContainer} />
-        <Route path="/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={SplashContainer} />
+        <AuthRoute path="/login" component={LoginFormContainer} />
+        <AuthRoute path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/" component={SplashContainer} />
     </Switch>
     <Footer />
   </div>
