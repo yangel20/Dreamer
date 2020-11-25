@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class PhotoIndex extends React.Component {
     constructor(props) {
@@ -11,7 +12,6 @@ class PhotoIndex extends React.Component {
     }
 
     render(){
-        // debugger
         // if (this.props.photos === undefined) {
         //     return <span>No photo yet!</span>;
         //   } 
@@ -19,16 +19,47 @@ class PhotoIndex extends React.Component {
          
         // const allPhotos = this.props.photos;
 
-        const allPhotos = this.props.photos.map(photo => {
-            return <img className={photo.id} src={photo.pictureUrl} key={photo.id}/>
-        })
+        // const allPhotos = this.props.photos.map(photo => {
+        //     return <img className={photo.id} src={photo.pictureUrl} key={photo.id}/>
+        // })
         
         return (
-            <div className="photos-conatainer">
-               
-                {allPhotos}
-                
+            // <div className="photos-conatainer">
+            //     {allPhotos}
+            // </div>
+
+
+            <div className="main-photo-index-div">
+
+            <div className="photos-container">
+            <ul className="photos-ul">
+                {
+                this.props.photos.map(photo =>
+                    <div className="photo-box" key={photo.id}>
+
+                    {/* <div className="photo-index-user-info">
+                        <Link
+                        className="photo-index-username"
+                        to={`/users/${photo.user.id}`}>
+                        {photo.user.username}
+                        </Link>
+                        <h2 className="featured">Featured</h2>
+                    </div> */}
+
+                    <div className="inner-box">
+                        <Link className="link-photo" to={`photos/${photo.id}`}>
+                            <img className="index-photo" src={photo.pictureUrl} />
+                        </Link>
+                    </div>
+                        <div className="photo-title-container">
+                            <div className="photo-title">{photo.title}</div>
+                        </div>
+
+                    </div>
+                )}
+            </ul>
             </div>
+        </div>
         )
     
     }

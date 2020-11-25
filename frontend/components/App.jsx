@@ -12,8 +12,9 @@ import {
     HashRouter
   } from 'react-router-dom';
 import Footer from "./footer";
-import PhotoIndex from "./explore/photo_index_container";
+import PhotoIndex from "./explore/photos_index_container";
 import { AuthRoute } from "../util/routes_util";
+import PhotoShowContainer from "./explore/photo_show_container";
 ;
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
         {/* //splash page that has everthing but nav bar */}
     </header>
     <Switch>
+        <Route path="/photos/:photoId" component={PhotoShowContainer} />
         <Route path="/explore" component={PhotoIndex} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />

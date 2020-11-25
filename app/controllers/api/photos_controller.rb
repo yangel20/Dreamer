@@ -1,5 +1,4 @@
 class Api::PhotosController < ApplicationController
-    # :index, :create, :update, :destroy :show]
     def index
         @photos = Photo.all
         

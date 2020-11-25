@@ -1,4 +1,4 @@
-json.array! @photos do |photo|
-    json extract! photo, :id, :title, :description, :user_id
-    json.pictureUrl Url_for(photo.picture)
+ json.set! @photo.id do 
+      json.pictureUrl @photo.picture.attached? ? url_for(@photo.picture) : ""
+      json.partial! "api/photos/photo", photo: @photo
 end

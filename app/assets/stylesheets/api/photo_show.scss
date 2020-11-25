@@ -1,0 +1,43 @@
+.photo-show-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #212124;
+}
+
+.img-photo-show{
+    max-height: 400px;
+    width: auto;
+}
+
+
+.photo-show-detail-container{
+    
+    position: relative;
+    height: auto;
+    width: 100%;
+    background: #F3F5F6;
+    padding-top: 20px;
+
+
+}
+.photo-show-detail-container{
+
+    
+}
+
+.title-photo-show{
+    color: black;
+    border-bottom: 1px solid #cfd6d9;
+    font-size: 20px;
+}
+
+.description-photo-show{
+    color: black;
+    border-bottom: 1px solid #cfd6d9;
+    font-size: 15px;
+    padding-top: 10px;
+}
