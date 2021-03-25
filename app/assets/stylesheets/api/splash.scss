@@ -13,16 +13,20 @@
 .splash-header{
     font-size: 56px;
     font-family: helvetica, arial, sans-serif;
+    -webkit-text-stroke-width: .95px;
+    -webkit-text-stroke-color:black;
 }
 .splash-h3{
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 900;
     max-width: 640px;
     text-align: center;
     margin-bottom: 50px;
     margin-top: 26px;
     line-height: 32px;
     font-family:  sans-serif;
+    -webkit-text-stroke-width: .95px;
+    -webkit-text-stroke-color:black;
 }
 
 .demo-button{
