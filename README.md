@@ -1,11 +1,9 @@
-# README
+# Dreamer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## [Live site](http://dreamer-heroku.herokuapp.com/#/)
 
-Things you may want to cover:
-
-* Ruby version
+## Overview
+Dreamer is a clone of the photo-sharing platrorm Flick.
 
 * System dependencies
 
