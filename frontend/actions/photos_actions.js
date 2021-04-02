@@ -2,6 +2,7 @@ import * as APIUtil from '../util/photos_api_util';
 
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
+export const CREATE_PHOTO = "CREATE_PHOTO";
 
 export const receivePhoto = (photo) => ({
   
@@ -20,7 +21,6 @@ export const receiveAllPhotos = ({photos, users}) => ({
 export const fetchAllPhotos = () => dispatch => (
     APIUtil.fetchAllPhotos().then(payload => (
         dispatch(receiveAllPhotos(payload))
-        
     ))     
 );
 

@@ -19,3 +19,11 @@ export const fetchPhoto = (photoId) => {
         url: `/api/photos/${photoId}`
     })
 }
+
+export const deletePhoto = (photoId) => (
+    $.ajax({
+      method: "DELETE",
+      url: `/api/photos/${photoId}`
+    })
+  );
+  
