@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 User.destroy_all
 Photo.destroy_all
@@ -38,7 +39,7 @@ ericConcert = Photo.create!(title:"my ecstasy", description:"I had a trippy trip
 ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of eating my favorite ice-cream, and just the thought of it made my mouth watery", user_id: eric.id)
 
 #--------------------------------------------------------------------------------------------------------------------
-require 'open-uri'
+
 #demo
 demoNightmare.picture.attach(io: File.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/elm_street.jpg"), filename: "elm_street.jpg")
 
