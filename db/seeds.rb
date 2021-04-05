@@ -19,23 +19,23 @@ jessica = User.create!(username:"jessica", password:"password17", email:"jessica
 
 eric = User.create!(username:"eric", password:"password17", email:"eric@aa.com")
 #--------------------------------------------------------------------------------------------------------------------
-demoNightmare = Photo.create!(title:"nightmare", description:"I had crazy nightmare", user_id: 1)
+demoNightmare = Photo.create!(title:"nightmare", description:"I had crazy nightmare", user_id: demo.id)
 
-johnPhoto = Photo.create!(title:"my favorite photo", description:"I hope you enjoy this", user_id: 2)
-johnMountain = Photo.create!(title:"the highest peek", description:"I had a dream in which I reached the top, and it was lonely.", user_id: 2)
-johnDominicanrepublic = Photo.create!(title:"soy frutero", description:"No hay algo mas mejor que una vida tropical!!!", user_id: 2)
-johnHotAirBalloon = Photo.create!(title:"no longer scared of height", description:"it's incredible to say that I conquered my fear of height with a dream", user_id: 2)
-johnTree = Photo.create!(title:"delusional", description:"First time i saw it, I thought it was just tree. But when I dreamt of it again, it was more than a tree", user_id: 2)
+johnPhoto = Photo.create!(title:"my favorite photo", description:"I hope you enjoy this", user_id: john.id)
+johnMountain = Photo.create!(title:"the highest peek", description:"I had a dream in which I reached the top, and it was lonely.", user_id: john.id)
+johnDominicanrepublic = Photo.create!(title:"soy frutero", description:"No hay algo mas mejor que una vida tropical!!!", user_id: john.id)
+johnHotAirBalloon = Photo.create!(title:"no longer scared of height", description:"it's incredible to say that I conquered my fear of height with a dream", user_id: john.id)
+johnTree = Photo.create!(title:"delusional", description:"First time i saw it, I thought it was just tree. But when I dreamt of it again, it was more than a tree", user_id: john.id)
 
-jessicaPhoto = Photo.create!(title:"this was scary", description:"I had a nightmare last night", user_id: 3)
-jessicaDreamCatcher = Photo.create!(title:"Dream Catcher", description:"In my dream I saw my dream catcher, I think this sign", user_id: 3)
-jessicaFood  = Photo.create!(title:"Cravings", description:"Day dreaming of my next meal", user_id: 3)
-jessicaDancing =  Photo.create!(title:"Celebration", description:"Living my best life is just more than a dream!!!!!", user_id: 3)
-jessicaVangogh =  Photo.create!(title:"my perfect date", description:"my perfect date was once drew by Van Gogh ", user_id: 3)
+jessicaPhoto = Photo.create!(title:"this was scary", description:"I had a nightmare last night", user_id: jessica.id)
+jessicaDreamCatcher = Photo.create!(title:"Dream Catcher", description:"In my dream I saw my dream catcher, I think this sign", user_id: jessica.id)
+jessicaFood  = Photo.create!(title:"Cravings", description:"Day dreaming of my next meal", user_id: jessica.id)
+jessicaDancing =  Photo.create!(title:"Celebration", description:"Living my best life is just more than a dream!!!!!", user_id: jessica.id)
+jessicaVangogh =  Photo.create!(title:"my perfect date", description:"my perfect date was once drew by Van Gogh ", user_id: jessica.id)
 
-ericPhoto = Photo.create!(title:"happy place", description:"I love it here", user_id: 4)
-ericConcert = Photo.create!(title:"my ecstasy", description:"I had a trippy trip and it was fun", user_id: 4)
-ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of eating my favorite ice-cream, and just the thought of it made my mouth watery", user_id: 4)
+ericPhoto = Photo.create!(title:"happy place", description:"I love it here", user_id: eric.id)
+ericConcert = Photo.create!(title:"my ecstasy", description:"I had a trippy trip and it was fun", user_id: eric.id)
+ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of eating my favorite ice-cream, and just the thought of it made my mouth watery", user_id: eric.id)
 
 #--------------------------------------------------------------------------------------------------------------------
 require 'open-uri'
