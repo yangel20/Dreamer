@@ -41,7 +41,7 @@ ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of e
 #--------------------------------------------------------------------------------------------------------------------
 
 #demo
-demoNightmare.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/elm_street.jpg"), filename: "elm_street.jpg")
+# demoNightmare.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/elm_street.jpg"), filename: "elm_street.jpg")
 
 #seed bucket
 #john
