@@ -65,6 +65,7 @@ demoNightmare.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/dre
 
 #production bucket
 #john
+
 johnPhoto.picture.attach(io: open("https://dreamer-pro.s3.amazonaws.com/johnfav.jpg"), filename: "johnfav.jpg")
 # johnMountain.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_mountain.jpg"), filename: "john_mountain.jpg")
 # johnDominicanrepublic.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_dominican_republic.jpg"), filename: "john_dominican_republic.jpg")
