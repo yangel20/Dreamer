@@ -1,4 +1,4 @@
-import { RECEIVE_PHOTO, RECEIVE_ALL_PHOTOS } from '../actions/photos_actions';
+import { RECEIVE_PHOTO, RECEIVE_ALL_PHOTOS, CREATE_PHOTO } from '../actions/photos_actions';
 
 
 
@@ -16,6 +16,10 @@ const photoReducer = (state = {}, action) => {
             
         case RECEIVE_ALL_PHOTOS:
             return action.photos;
+
+        case CREATE_PHOTO:
+            return merge( {}, state, {[photo.id]: photo})
+            
     
         default:
             return state;
