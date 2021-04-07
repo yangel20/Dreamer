@@ -9,7 +9,7 @@ class Splash extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const demo = {username:"demo", password:"password17"};
+    const demo = {username:"demo", password:"password"};
     this.props.processForm(demo);
   }
   
