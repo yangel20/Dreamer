@@ -45,23 +45,23 @@ ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of e
 demoNightmare.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/elm_street.jpg"))
 
 # john
-johnPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/johnfav.jpg"), filename: "johnfav.jpg")
-johnMountain.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_mountain.jpg"), filename: "john_mountain.jpg")
-johnDominicanrepublic.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_dominican_republic.jpg"), filename: "john_dominican_republic.jpg")
-johnHotAirBalloon.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_hot_air_balloon.jpg"), filename: "john_hot_air_balloon.jpg")
-johnTree.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_tree.jpg"), filename: "john_tree.jpg")
+johnPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/johnfav.jpg"))
+johnMountain.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_mountain.jpg"))
+johnDominicanrepublic.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_dominican_republic.jpg"))
+johnHotAirBalloon.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_hot_air_balloon.jpg"))
+johnTree.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_tree.jpg"))
 
 #jessica
-jessicaPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_Nightmare.jpg"), filename: "jessica_Nightmare.jpg")
-jessicaDreamCatcher.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dream_catcher.jpeg"), filename: "jessica_dream_catcher.jpeg")
-jessicaFood.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_food.jpg"), filename: "jessica_food.jpg")
-jessicaDancing.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dancing.jpg"), filename: "jessica_dancing.jpg")
-jessicaVangogh.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_van_gogh.jpg"), filename: "jessica_van_gogh.jpg")
+jessicaPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_Nightmare.jpg"))
+jessicaDreamCatcher.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dream_catcher.jpeg"))
+jessicaFood.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_food.jpg"))
+jessicaDancing.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dancing.jpg"))
+jessicaVangogh.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_van_gogh.jpg"))
 
 #eric
-ericPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_happy_place.jpg"), filename: "eric_happy_place.jpg")
-ericConcert.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_concert.jpg"), filename: "eric_concert.jpg")
-ericIcecream.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_icecream.jpg"), filename: "eric_icecream.jpg")
+ericPhoto.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_happy_place.jpg"))
+ericConcert.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_concert.jpg"))
+ericIcecream.picture.attach(URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_icecream.jpg"))
 
 #production bucket-----
 #john
