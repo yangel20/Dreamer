@@ -5,8 +5,8 @@ import { RECEIVE_PHOTO, RECEIVE_ALL_PHOTOS, CREATE_PHOTO } from '../actions/phot
 
 const photoReducer = (state = {}, action) => {
     Object.freeze(state);
-
     let newState = {};
+    
     switch (action.type) {
 
         case RECEIVE_PHOTO:

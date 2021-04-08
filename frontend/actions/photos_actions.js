@@ -17,6 +17,13 @@ export const receiveAllPhotos = ({photos, users}) => ({
     users: users
 });
 
+export const createAPhoto = ({photo}) =>({
+
+    type: CREATE_PHOTO,
+    photo
+})
+
+
 
 export const fetchAllPhotos = () => dispatch => (
     APIUtil.fetchAllPhotos().then(payload => (
