@@ -20,6 +20,7 @@ const navbar = ({ currentUser, logout }) => {
       <Link className="DreamerLogo" to="/">Dreamer</Link>
       <h2 className="header-name">Hello, {currentUser.username}!</h2>
       <input className="search-bar" type="text" placeholder="Dreams.." ></input>
+      <Link className="upload-btn" to="/photo/upload">upload</Link>
       <button className="header-button" onClick={logout}>Log Out</button>
     </nav>
   );

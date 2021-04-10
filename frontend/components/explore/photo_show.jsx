@@ -28,4 +28,4 @@ class PhotoShow extends React.Component {
     }
 }
 
-export default PhotoShow
+export default PhotoShow;
