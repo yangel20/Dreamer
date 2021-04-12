@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createPhoto } from '../../actions/photos_actions';
-import addPhoto from './photo_show';
+import addPhoto from './photo_add';
 
 
 const mSTP = (state, ownProps) => {
