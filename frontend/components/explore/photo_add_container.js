@@ -4,16 +4,19 @@ import addPhoto from './photo_add';
 
 
 const mSTP = (state, ownProps) => {
+    debugger
     return {
         photo: state.entities.photos[ownProps.match.params.photoId] || "",
-        users: state.entities.users
+        currentUser: state.entities.users[state.session.id]
     }
 };
 
 const mDTP = dispatch => ({
-    createPhoto: (photoId) =>(
-        dispatch(createPhoto(photoId))
+    createPhoto: (newPhoto) =>(
+        dispatch(createPhoto(newPhoto))
     )
+
+
 })
 
 export default connect(mSTP, mDTP)(addPhoto);

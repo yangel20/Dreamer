@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/photos_api_util';
+import * as photos_util from '../util/photos_api_util';
 
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
@@ -26,19 +26,19 @@ export const createAPhoto = ({photo}) =>({
 
 
 export const fetchAllPhotos = () => dispatch => (
-    APIUtil.fetchAllPhotos().then(payload => (
+    photos_util.fetchAllPhotos().then(payload => (
         dispatch(receiveAllPhotos(payload))
     ))     
 );
 
 export const createPhoto = photo => dispatch => (
-    APIUtil.createPhoto(photo).then( newPhoto => (
+    photos_util.createPhoto(photo).then( newPhoto => (
         dispatch(receivePhoto(newPhoto))
     ))
 );
 
 export const fetchPhoto = photoId => dispatch => (
-    APIUtil.fetchPhoto(photoId).then(photo => (
+    photos_util.fetchPhoto(photoId).then(photo => (
         dispatch(receivePhoto(photo))
     ))
 );

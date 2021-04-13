@@ -14,7 +14,7 @@ class Api::PhotosController < ApplicationController
     def create
         photo = Photo.new(photo_params)
 
-        if photo.save
+        if photo.save!
             render json: photo
         else
             render json: photo.errors.full_messages, status: 422
@@ -40,7 +40,7 @@ class Api::PhotosController < ApplicationController
 
     private
     def photo_params
-        params.require(:photo).permit(:title, :description, :user_id)
+        params.require(:photo).permit(:title, :description, :user_id, :photo)
     end
 
 end
