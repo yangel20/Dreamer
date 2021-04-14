@@ -12,17 +12,18 @@ class Api::PhotosController < ApplicationController
     end
 
     def create
-        photo = Photo.new(photo_params)
-
-        if photo.save!
-            render json: photo
+        @photo = Photo.new(photo_params)
+            debugger
+        if @photo.save!
+            debugger
+            render :show
         else
             render json: photo.errors.full_messages, status: 422
         end
     end
 
     def update
-        photo = Photo.find_by(id: params[:id])
+        @photo = Photo.find_by(id: params[:id])
 
         if photo.update(photo_params)
             redirect_to photo_url(photo)
@@ -32,9 +33,13 @@ class Api::PhotosController < ApplicationController
     end
 
     def destroy
-        photo = Photo.find(params[:id])
-        photo.destroy
-        render :show      
+        @photo = Photo.find(params[:id])
+
+        if @photo.destroy
+            render :show
+        else
+            render json: ["photo not destroyed"], status: 401
+        end
 
     end
 

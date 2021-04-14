@@ -7,18 +7,28 @@ class PhotoAdd extends React.Component {
             title: "we uploaded a picture",
             description: "hello world we did it",
             user_id: this.props.currentUser.id,
-            pictureUrl: ""
+            pictureUrl: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e){
-        this.props.createPhoto(
-            {title: "we uploaded a picture",
-            description: "hello world we did it",
-            user_id: this.props.currentUser.id,
-            pictureUrl: URL.createObjectURL(e.target.files[0])}
-        )
+        debugger
+        this.setState({pictureUrl: URL.createObjectURL(e.currentTarget.files[0])})
+        debugger
+        // e.preventDefault();
+        const photoData = new FormData();
+        photoData.append('photo[title]', this.state.title);
+        photoData.append('photo[description]', this.state.description);
+        photoData.append('photo[photo]', this.state.pictureUrl);
+        debugger
+        this.props.createPhoto(photoData);
+        // this.props.createPhoto(
+        //     {title: "we uploaded a picture",
+        //     description: "hello world we did it",
+        //     user_id: this.props.currentUser.id,
+        //     pictureUrl: URL.createObjectURL(e.target.files[0])}
+        // )
         debugger
     }
 

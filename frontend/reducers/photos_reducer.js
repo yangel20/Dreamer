@@ -11,7 +11,7 @@ const photoReducer = (state = {}, action) => {
 
         case RECEIVE_PHOTO:
             const { photo } = action;
-            debugger
+            // debugger
             newState = Object.assign( {}, state, photo);
             return newState;
             
