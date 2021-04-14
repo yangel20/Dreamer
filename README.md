@@ -26,3 +26,4 @@ update
 git 2.3.5.6
  
  hello223
+ btn data info fixed
