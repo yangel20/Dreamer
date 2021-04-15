@@ -14,10 +14,10 @@ class Api::PhotosController < ApplicationController
     def update
         @photo = Photo.find_by(id: params[:id])
         
-        if photo.update(photo_params)
+        if @photo.update(photo_params)
             redirect_to photo_url(photo)
         else
-            render json: photo.errors.full_messages, status: unprocessable_entity
+            render json: @photo.errors.full_messages, status: unprocessable_entity
         end
     end
     
@@ -36,18 +36,19 @@ class Api::PhotosController < ApplicationController
     def create
         # debugger
         @photo = Photo.new(photo_params)
-            @photo.user_id = current_user.id
+        @photo.user_id = current_user.id
+            
             # debugger
         if @photo.save!
             # debugger
             render :show
         else
-            render json: photo.errors.full_messages, status: 422
+            render json: @photo.errors.full_messages, status: 422
         end
     end
     private
     def photo_params
-        params.require(:photo).permit(:title, :description, :picture)
+        params.require(:photo).permit(:title, :description, :picture, :user_id)
     end
 
 end

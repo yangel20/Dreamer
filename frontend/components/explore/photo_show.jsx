@@ -22,9 +22,9 @@ class PhotoShow extends React.Component {
 
     // delete photo !! 
     deletePhotoInfo(e){
-      debugger
+      // debugger
       console.log(e)
-      // this.props.deletePhoto(this.state.photo_id)
+      this.props.deletePhoto(this.state.photo_id)
     }
 
     render() {

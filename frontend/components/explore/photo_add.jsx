@@ -14,9 +14,9 @@ class PhotoAdd extends React.Component {
     }
 
     handleFile(e){
-        e.preventDefault();
+        // e.preventDefault();
         // debugger
-        this.setState({pictureUrl: URL.createObjectURL(e.currentTarget.files[0])})
+        this.setState({pictureUrl: e.currentTarget.files[0]})
         // debugger
         // this.handleSubmit()
     }
@@ -48,14 +48,15 @@ class PhotoAdd extends React.Component {
     render(){
         // debugger
         return (
-
-                <form >
+            <div>
+                {/* <form > */}
             <div className="btn-upload-container">
                     <div className="btn-words">Choose Photo to upload</div>
                     <input className="btn-upload" type="file"  multiple onChange={this.handleFile} />
             </div>
             <button  onClick={this.handleSubmit} >submit</button>
-                </form>
+                {/* </form> */}
+            </div>
         )
     }
 }
