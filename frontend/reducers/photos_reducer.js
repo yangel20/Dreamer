@@ -1,4 +1,4 @@
-import { RECEIVE_PHOTO, RECEIVE_ALL_PHOTOS, CREATE_PHOTO } from '../actions/photos_actions';
+import { RECEIVE_PHOTO, RECEIVE_ALL_PHOTOS, CREATE_PHOTO, DELETE_PHOTO } from '../actions/photos_actions';
 
 
 
@@ -20,6 +20,10 @@ const photoReducer = (state = {}, action) => {
 
         // case CREATE_PHOTO:
         //     return Object.assign( {}, state, {[photo.id]: photo})
+        case DELETE_PHOTO:
+            newState = Object.assign( {}, state);
+            delete newState[action.photoId];
+            return newState;
             
     
         default:

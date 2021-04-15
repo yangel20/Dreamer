@@ -3,12 +3,29 @@ import React from 'react';
 class PhotoShow extends React.Component {
     constructor(props){
       super(props);
+      this.state= {
+        photo_id: this.props.photo.id
+      }
+
+      this.deletePhotoInfo = this.deletePhotoInfo.bind(this);
     }
 
     componentDidMount(){
         this.props.fetchPhoto(this.props.match.params.photoId);
+
+        // if(this.props.photo.user_id === this.props.currentUser.id ){
+        //   return dltB = <button onClick={this.deletePhotoInfo}> delete</button>
+        // } else {
+        //   return dltB = null
+        // }
     }
 
+    // delete photo !! 
+    deletePhotoInfo(e){
+      debugger
+      console.log(e)
+      // this.props.deletePhoto(this.state.photo_id)
+    }
 
     render() {
   
@@ -16,6 +33,9 @@ class PhotoShow extends React.Component {
           <div>
             <div className="photo-show-container">
               <img className="img-photo-show" src={this.props.photo.pictureUrl} />
+              {(this.props.photo.user_id === this.props.currentUser.id ) ?
+              (<button onClick={this.deletePhotoInfo}> delete</button>):
+              (null)}
             </div>
             <div className="photo-show-detail-container">
               <div className="title-description">

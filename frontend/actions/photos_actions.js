@@ -3,6 +3,7 @@ import * as photos_util from '../util/photos_api_util';
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
 export const CREATE_PHOTO = "CREATE_PHOTO";
+export const DELETE_PHOTO = "DELETE_PHOTO";
 
 export const receivePhoto = (photo) => ({
   
@@ -23,6 +24,12 @@ export const createAPhoto = ({photo}) =>({
     photo
 })
 
+export const deleteAPhoto = (photoId) => ({
+    type: DELETE_PHOTO,
+    photoId
+})
+
+
 
 
 export const fetchAllPhotos = () => dispatch => (
@@ -41,6 +48,12 @@ export const fetchPhoto = photoId => dispatch => (
     photos_util.fetchPhoto(photoId).then(photo => (
         dispatch(receivePhoto(photo))
     ))
+);
+
+export const deletePhoto = photoId => dispatch => (
+    photos_util.deletePhoto(photoId).then(() => ( 
+       dispatch(deletePhoto(photoId))
+       ))
 );
 
 
