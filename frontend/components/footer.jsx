@@ -7,9 +7,9 @@ const footer = () => {
     <div className="footerContainer">
         <footer className="footers">
             <IconContext.Provider value={{className: 'react-icons'}}>
-                <a href="https://github.com/yangel20"><FaGithub/></a>
+                <a href="https://github.com/yangel20" target="_blank" ><FaGithub/></a>
                 &nbsp; &nbsp;
-                <a href="https://www.linkedin.com/in/yangel-aguilera-558a17173"><FaLinkedin/></a>
+                <a href="https://www.linkedin.com/in/yangel-aguilera-558a17173" target="_blank" ><FaLinkedin/></a>
              </IconContext.Provider>
         </footer>
     </div>

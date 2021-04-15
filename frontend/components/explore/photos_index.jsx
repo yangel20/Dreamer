@@ -10,6 +10,7 @@ class PhotoIndex extends React.Component {
 
     componentDidMount(){
         this.props.fetchAllPhotos();
+        debugger
     }
 
     render(){
@@ -23,7 +24,7 @@ class PhotoIndex extends React.Component {
         // const allPhotos = this.props.photos.map(photo => {
         //     return <img className={photo.id} src={photo.pictureUrl} key={photo.id}/>
         // })
-        
+        debugger
         return (
             // <div className="photos-conatainer">
             //     {allPhotos}
@@ -54,6 +55,7 @@ class PhotoIndex extends React.Component {
                     </div>
                         <div className="photo-title-container">
                             <div className="photo-title">{photo.title}</div>
+                            <div className="photo-arthur">{}</div>
                         </div>
 
                     </div>
