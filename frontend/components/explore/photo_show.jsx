@@ -21,10 +21,8 @@ class PhotoShow extends React.Component {
     }
 
     // delete photo !! 
-    deletePhotoInfo(e){
-      // debugger
-      console.log(e)
-      this.props.deletePhoto(this.state.photo_id)
+    deletePhotoInfo(){
+      this.props.deletePhoto(this.state.photo_id).then(this.props.history.push("/explore"));
     }
 
     render() {
@@ -34,7 +32,7 @@ class PhotoShow extends React.Component {
             <div className="photo-show-container">
               <img className="img-photo-show" src={this.props.photo.pictureUrl} />
               {(this.props.photo.user_id === this.props.currentUser.id ) ?
-              (<button onClick={this.deletePhotoInfo}> delete</button>):
+              (<button className="Delete-btn" onClick={this.deletePhotoInfo}> Delete </button>):
               (null)}
             </div>
             <div className="photo-show-detail-container">

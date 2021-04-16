@@ -21,7 +21,7 @@ class PhotoAdd extends React.Component {
         // this.handleSubmit()
     }
 
-    handleSubmit(e){ 
+    handleSubmit(){ 
         // e.preventDefault();
         // debugger
         // this.setState({pictureUrl: URL.createObjectURL(e.currentTarget.files[0])})

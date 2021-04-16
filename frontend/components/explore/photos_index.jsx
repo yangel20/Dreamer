@@ -52,11 +52,10 @@ class PhotoIndex extends React.Component {
                         <Link className="link-photo" to={`photos/${photo.id}`}>
                             <img className="index-photo" src={photo.pictureUrl} />
                         </Link>
+                        <div className="photo-title">{photo.title}</div>
+                        {/* <div className="photo-arthur">{}</div> */}
                     </div>
-                        <div className="photo-title-container">
-                            <div className="photo-title">{photo.title}</div>
-                            {/* <div className="photo-arthur">{}</div> */}
-                        </div>
+
 
                     </div>
                 )}
