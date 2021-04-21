@@ -22,12 +22,12 @@ export const createAPhoto = ({photo}) =>({
 
     type: CREATE_PHOTO,
     photo
-})
+});
 
 export const deleteAPhoto = (photoId) => ({
     type: DELETE_PHOTO,
     photoId
-})
+});
 
 
 

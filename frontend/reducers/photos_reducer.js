@@ -24,7 +24,6 @@ const photoReducer = (state = {}, action) => {
             newState = Object.assign( {}, state);
             delete newState[action.photoId];
             return newState;
-            
     
         default:
             return state;
