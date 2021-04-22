@@ -15,6 +15,8 @@ class PhotoIndex extends React.Component {
     }
 
     render(){
+
+        debugger
         return (
             // <div className="photos-conatainer">
             //     {allPhotos}
@@ -34,8 +36,10 @@ class PhotoIndex extends React.Component {
                         <Link className="link-photo" to={`photos/${photo.id}`}>
                             <img className="index-photo" src={photo.pictureUrl} />
                         </Link>
-                        <div className="photo-title">{photo.title}</div>
-                        <div className="photo-arthur">{this.props.users.id}</div>
+                        <div className="photo-title">
+                            <div >{photo.title}</div>
+                            <div className="photo-arthur">by {this.props.users[photo.user_id].username}</div>
+                        </div>
                     </div>
 
 

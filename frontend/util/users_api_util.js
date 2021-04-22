@@ -3,4 +3,4 @@ export const fetchAllUsers = () => {
         method: "GET",
         url: "/api/users"
     })
-}
+};

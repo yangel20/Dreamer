@@ -3,10 +3,10 @@ import React from 'react';
 class PhotoShow extends React.Component {
     constructor(props){
       super(props);
-      this.state= {
+      this.state = {
         photo_id: this.props.photo.id
       }
-
+      
       this.deletePhotoInfo = this.deletePhotoInfo.bind(this);
     }
 
@@ -26,7 +26,7 @@ class PhotoShow extends React.Component {
     }
 
     render() {
-  
+      debugger
         return (
           <div>
             <div className="photo-show-container">

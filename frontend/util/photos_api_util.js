@@ -3,7 +3,7 @@ export const fetchAllPhotos = () => {
         method: "GET",
         url: "/api/photos"
     })
-}
+};
 
 export const createPhoto = (photoData) => {
     return $.ajax({
@@ -13,14 +13,14 @@ export const createPhoto = (photoData) => {
         contentType: false,
         processData: false
     })
-}
+};
 
 export const fetchPhoto = (photoId) => {
     return $.ajax({
         method: "GET",
         url: `/api/photos/${photoId}`
     })
-}
+};
 
 export const deletePhoto = (photoId) => (
     $.ajax({
