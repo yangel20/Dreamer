@@ -16,7 +16,7 @@ class PhotoIndex extends React.Component {
 
     render(){
 
-        debugger
+        // debugger
         return (
             // <div className="photos-conatainer">
             //     {allPhotos}

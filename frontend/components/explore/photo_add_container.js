@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createPhoto } from '../../actions/photos_actions';
-import addPhoto from './photo_add';
+import PhotoAdd from './photo_add';
 
 
 const mSTP = (state, ownProps) => {
@@ -15,8 +15,6 @@ const mDTP = dispatch => ({
     createPhoto: (newPhoto) =>(
         dispatch(createPhoto(newPhoto))
     )
-
-
 })
 
-export default connect(mSTP, mDTP)(addPhoto);
+export default connect(mSTP, mDTP)(PhotoAdd);

@@ -31,7 +31,7 @@ class PhotoShow extends React.Component {
           <div>
             <div className="photo-show-container">
               <img className="img-photo-show" src={this.props.photo.pictureUrl} />
-              {(this.props.photo.user_id === this.props.currentUser.id ) ?
+              {(this.props.photo.user_id === this.props.currentUser ) ?
               (<button className="Delete-btn" onClick={this.deletePhotoInfo}> Delete </button>):
               (null)}
             </div>
