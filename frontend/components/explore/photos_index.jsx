@@ -10,20 +10,13 @@ class PhotoIndex extends React.Component {
 
     componentDidMount(){
         this.props.fetchAllPhotos();
+        this.props.fetchAllUsers();
+        // debugger
     }
 
     render(){
-        // if (this.props.photos === undefined) {
-        //     return <span>No photo yet!</span>;
-        //   } 
-        // console.log(this.props)
-         
-        // const allPhotos = this.props.photos;
 
-        // const allPhotos = this.props.photos.map(photo => {
-        //     return <img className={photo.id} src={photo.pictureUrl} key={photo.id}/>
-        // })
-        
+        // debugger
         return (
             // <div className="photos-conatainer">
             //     {allPhotos}
@@ -38,23 +31,17 @@ class PhotoIndex extends React.Component {
                 this.props.photos.map(photo =>
                     <div className="photo-box" key={photo.id}>
 
-                    {/* <div className="photo-index-user-info">
-                        <Link
-                        className="photo-index-username"
-                        to={`/users/${photo.user.id}`}>
-                        {photo.user.username}
-                        </Link>
-                        <h2 className="featured">Featured</h2>
-                    </div> */}
 
                     <div className="inner-box">
                         <Link className="link-photo" to={`photos/${photo.id}`}>
                             <img className="index-photo" src={photo.pictureUrl} />
                         </Link>
-                    </div>
-                        <div className="photo-title-container">
-                            <div className="photo-title">{photo.title}</div>
+                        <div className="photo-title">
+                            <div >{photo.title}</div>
+                            <div className="photo-arthur">by {this.props.users[photo.user_id].username}</div>
                         </div>
+                    </div>
+
 
                     </div>
                 )}

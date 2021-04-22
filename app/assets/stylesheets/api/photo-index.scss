@@ -24,14 +24,27 @@
 
 
 .inner-box{
-    width: 100%;
-    display: flex;
-  }
+  width: 100%;
+  display: flex;
   
- 
+}
+
+.inner-box:hover .photo-title{
+  visibility: visible;
+
+}
+
+.photo-title{
+  position: absolute;
+  visibility: hidden;
   
-  .inner-box img{
-    width:100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  color: white;
+}
+
+
+  
+.inner-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -10,37 +10,45 @@ class Api::PhotosController < ApplicationController
 
         render :show            
     end
-
-    def create
-        photo = Photo.new(photo_params)
-
-        if photo.save
-            render json: photo
-        else
-            render json: photo.errors.full_messages, status: 422
-        end
-    end
-
+    
     def update
-        photo = Photo.find_by(id: params[:id])
-
-        if photo.update(photo_params)
+        @photo = Photo.find_by(id: params[:id])
+        
+        if @photo.update(photo_params)
             redirect_to photo_url(photo)
         else
-            render json: photo.errors.full_messages, status: unprocessable_entity
+            render json: @photo.errors.full_messages, status: unprocessable_entity
         end
     end
-
+    
     def destroy
-        photo = Photo.find(params[:id])
-        photo.destroy
-        render :show      
-
+        @photo = Photo.find(params[:id])
+        
+        if @photo.destroy
+            render :show
+        else
+            render json: ["photo not destroyed"], status: 401
+        end
+        
     end
-
+    
+    
+    def create
+        # debugger
+        @photo = Photo.new(photo_params)
+        @photo.user_id = current_user.id
+            
+            # debugger
+        if @photo.save!
+            # debugger
+            render :show
+        else
+            render json: @photo.errors.full_messages, status: 422
+        end
+    end
     private
     def photo_params
-        params.require(:photo).permit(:title, :description, :user_id)
+        params.require(:photo).permit(:title, :description, :picture, :user_id)
     end
 
 end

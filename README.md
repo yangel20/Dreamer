@@ -24,9 +24,5 @@ change change change
 update
 # Dreamer
 git 2.3.5.6
- 
- hello223
- btn data info fixed
- fix upload btn 
- css change 
- sending user info to explore page - complete
+
+hello
