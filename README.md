@@ -29,4 +29,4 @@ git 2.3.5.6
  btn data info fixed
  fix upload btn 
  css change 
- sending user info to explore page
+ sending user info to explore page - complete
