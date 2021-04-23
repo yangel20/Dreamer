@@ -4,18 +4,25 @@ import React from 'react';
 class PhotoAddItem extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = {
             title: this.props.file.file.name,
             description: ""
         }
+        debugger
     }
 
     render(){
         const { file, handleInput } = this.props;
         return (
-            <button>
-                <div>
-                    <img src={file.url}/>
+            <button className={`thumbnail-container${file.index}`} >
+                <div 
+                    className={`thumbnail${file.index}`}
+                >
+                    <img 
+                        className={`thumbnail-photo${file.index}`} 
+                        src={file.url}
+                    />
                 </div>
                 <div>
                     <input 

@@ -47,7 +47,7 @@ class PhotoAdd extends React.Component {
                 j++;
             } else {
                 nextState.files[j] = {
-                    file: uploadFile[j],
+                    file: uploadFile[i],
                     url: URL.createObjectURL(uploadFile[i]),
                     index: j
                 }
@@ -71,17 +71,17 @@ class PhotoAdd extends React.Component {
         const state = this.state;
         let filesUploaded = 0;
         while (filesUploaded < state.files.length) {
-            debugger
+
             let photoData = new FormData();
             photoData.append('photo[description]', state.descriptions[filesUploaded].value === "" ? "No Description" : state.descriptions[filesUploaded].value);
             photoData.append('photo[title]', state.titles[filesUploaded].value === "" ?  "Untitled" : state.titles[filesUploaded]);
             photoData.append('photo[picture]', state.files[filesUploaded].file);
-            debugger
             this.props.createPhoto(photoData)
                 .then(filesUploaded++);
-        }
+        };
+
         if (filesUploaded === state.files.length) {
-            this.props.history.push("/explore")
+            this.props.history.push("/explore");
         }
     }
 
@@ -96,7 +96,7 @@ class PhotoAdd extends React.Component {
                     <input className="btn-upload" type="file"  multiple onChange={this.handleFile} />
             </div>
         ) : (null);
-        
+        debugger
         const thumbails = this.state.files.map(file => {
             return (
                 <PhotoAddItem
@@ -112,12 +112,12 @@ class PhotoAdd extends React.Component {
 
         return (
             <div className="photo-upload-container">
-                {/* <div className="btn-upload-container">
-                    <div className="btn-words">Choose Photo to upload</div>
-                    <input className="btn-upload" type="file"  multiple onChange={this.handleFile} />
-                </div> */}
+                <div className="photo-upload-nav">
+                    <input className="nav-btn-upload" type="file"  multiple onChange={this.handleFile} />
+                    <button onClick={this.handleSubmit} >submit</button>
+                </div>
                 {uploadBtnCenter}
-                <button onClick={this.handleSubmit} >submit</button>
+                
                 {thumbails}
             </div>
         )
