@@ -1,3 +1,10 @@
+.photo-upload-container{
+    position: relative;
+    background-color:  rgb(45, 45, 45);
+    height: 90vh;
+    bottom: 0;
+}
+
 .btn-upload-container {
     font-family: Arial, Helvetica, sans-serif;
     position: fixed;

@@ -89,6 +89,14 @@ class PhotoAdd extends React.Component {
 
     render(){
         
+        const numPhotos = this.state.files.filter(Boolean).length;
+        let uploadBtnCenter = numPhotos === 0 ?(
+            <div className="btn-upload-container">
+                    <div className="btn-words">Choose Photo to upload</div>
+                    <input className="btn-upload" type="file"  multiple onChange={this.handleFile} />
+            </div>
+        ) : (null);
+        
         const thumbails = this.state.files.map(file => {
             return (
                 <PhotoAddItem
@@ -100,12 +108,15 @@ class PhotoAdd extends React.Component {
             );
         })
 
+      
+
         return (
-            <div>
-                <div className="btn-upload-container">
+            <div className="photo-upload-container">
+                {/* <div className="btn-upload-container">
                     <div className="btn-words">Choose Photo to upload</div>
                     <input className="btn-upload" type="file"  multiple onChange={this.handleFile} />
-                </div>
+                </div> */}
+                {uploadBtnCenter}
                 <button onClick={this.handleSubmit} >submit</button>
                 {thumbails}
             </div>
