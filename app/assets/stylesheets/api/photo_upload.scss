@@ -1,0 +1,140 @@
+.photo-upload-container{
+    position: relative;
+    background-color:  rgb(51, 51, 51);
+    height: 90vh;
+    bottom: 0;
+}
+
+.btn-upload-container {
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    max-width: 50em;
+    background-color: #0569e2;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+}
+
+.btn-words {
+    color: white;
+    padding: 5px 8px;
+    text-shadow: 0 1px black;
+}
+
+.btn-upload-container:hover {
+    background-color: #0149a1;
+
+}
+
+.btn-upload {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.nav-btn-upload{
+    display: none;
+}
+
+/*photo-add-item */
+.photo-upload-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color:  rgb(240, 240, 240);
+}
+
+.nav-btn-submit{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0569e2;
+    color: white;
+    font-weight: bolder;
+    height: 26px;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    margin-right: 2vh;
+    min-width: fit-content;
+}
+
+.nav-btn-submit:hover {
+    background-color: #0149a1;
+}
+
+.all-thumbnails{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+[class^="thumbnail-container"] {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    height: 200px;
+    max-width: 200px;
+    box-shadow: none;
+    border: none;
+}
+
+[class^="thumbnail-container"]:hover {
+    background-color:  rgb(34, 34, 34);
+}
+
+/*[class^="thumbnail-container"] {
+    height: 100%;
+    width: 100%;
+}*/
+
+[class^="thumbnail-photo"] {
+    display: block;
+    object-fit: cover;
+    max-width: 180px;
+    max-height: 120px;
+    border: 3px solid transparent;
+    background-color:  rgb(34, 34, 34);
+}
+
+[class^="thumbnail-container"] input {
+    width: 100%;
+    height: 22px;
+    border: 0;
+    margin: 0;
+    padding: 2px;
+    color: #CCC;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 13px;
+}
+[class^="thumbnail-container"] input:focus{
+    background-color: rgb(241, 241, 241);
+    box-shadow: 1px 1px 2px 0 ;
+    color: rgb(43, 43, 43);
+}
+
+[class^="thumbnail-container"] textarea {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 2px;
+    color: #CCC;
+    background-color: transparent;
+    border-radius: 2px;
+    resize: none;
+}
+
+[class^="thumbnail-container"] textarea:focus{
+    background-color: rgb(241, 241, 241);
+    box-shadow: 1px 1px 2px 0 ;
+    color: rgb(43, 43, 43);
+}
