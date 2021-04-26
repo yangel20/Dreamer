@@ -4,20 +4,20 @@ import React from 'react';
 class PhotoAddItem extends React.Component {
     constructor(props) {
         super(props);
-        debugger
         this.state = {
             title: this.props.file.file.name,
             description: ""
         }
-        debugger
     }
 
     render(){
-        const { file, handleInput } = this.props;
+        const { file, handleInput, select } = this.props;
         return (
-            <button className={`thumbnail-container${file.index}`} >
+            <button 
+                onClick={select(file.index)}
+                className={`thumbnail-container${file.index}`} >
                 <div 
-                    className={`thumbnail${file.index}`}
+                    className={`thumbnail-${file.index}`} 
                 >
                     <img 
                         className={`thumbnail-photo${file.index}`} 

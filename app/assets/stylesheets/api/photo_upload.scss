@@ -38,7 +38,14 @@
 }
 
 .nav-btn-upload{
+    font-size: 18px;
+}
+.nav-btn-upload-input{
     display: none;
+}
+
+.nav-btn-delete{
+    font-size: 18px;
 }
 
 /*photo-add-item */
@@ -50,6 +57,7 @@
     height: 40px;
     background-color:  rgb(240, 240, 240);
 }
+
 
 .nav-btn-submit{
     font-family: Arial, Helvetica, sans-serif;
@@ -103,6 +111,9 @@
     max-height: 120px;
     border: 3px solid transparent;
     background-color:  rgb(34, 34, 34);
+}
+.selected-thumbnail {
+    border: 3px solid darkorchid;
 }
 
 [class^="thumbnail-container"] input {
