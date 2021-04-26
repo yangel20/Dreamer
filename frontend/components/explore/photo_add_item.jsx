@@ -11,11 +11,18 @@ class PhotoAddItem extends React.Component {
     }
 
     render(){
-        const { file, handleInput } = this.props;
+        const { file, handleInput, select } = this.props;
         return (
-            <button>
-                <div>
-                    <img src={file.url}/>
+            <button 
+                onClick={select(file.index)}
+                className={`thumbnail-container${file.index}`} >
+                <div 
+                    className={`thumbnail-${file.index}`} 
+                >
+                    <img 
+                        className={`thumbnail-photo${file.index}`} 
+                        src={file.url}
+                    />
                 </div>
                 <div>
                     <input 

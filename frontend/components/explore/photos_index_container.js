@@ -10,7 +10,6 @@ const mSTP = ({entities: { users, photos } }) =>
 
 // });
 {
-    debugger
     return {
         photos: Object.values(photos),
         users: users

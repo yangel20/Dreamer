@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {  } from 'react-icons/fa';
+import { BsCloudUpload } from 'react-icons/bs';
 
 
 
@@ -20,7 +20,7 @@ const navbar = ({ currentUser, logout }) => {
       <Link className="DreamerLogo" to="/">Dreamer</Link>
       <h2 className="header-name">Hello, {currentUser.username}!</h2>
       <input className="search-bar" type="text" placeholder="Dreams.." ></input>
-      <Link className="link-to-upload" to="/upload" >Upload</Link>
+      <Link className="link-to-upload" to="/upload" ><BsCloudUpload size="30" /></Link>
       <button className="header-button" onClick={logout}>Log Out</button>
     </nav>
   );
