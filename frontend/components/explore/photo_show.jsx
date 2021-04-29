@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentsIndexContainer from '../comments/comments_index_container';
 
 class PhotoShow extends React.Component {
     constructor(props){
@@ -11,13 +12,7 @@ class PhotoShow extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchPhoto(this.props.match.params.photoId);
-
-        // if(this.props.photo.user_id === this.props.currentUser.id ){
-        //   return dltB = <button onClick={this.deletePhotoInfo}> delete</button>
-        // } else {
-        //   return dltB = null
-        // }
+      this.props.fetchPhoto(this.props.match.params.photoId);
     }
 
     // delete photo !! 
@@ -40,6 +35,7 @@ class PhotoShow extends React.Component {
                 <div className="description-photo-show">{this.props.photo.description}</div>
               </div>
             </div>
+              <CommentsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
           </div>
         )
     }
