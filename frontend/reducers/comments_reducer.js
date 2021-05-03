@@ -1,6 +1,6 @@
 import { RECEIVE_ALL_COMMENTS, RECEIVE_COMMENT, DELETE_COMMENT } from '../actions/comments_action';
 
-const commentReducer = (state = {}, action) => {
+const commentsReducer = (state = {}, action) => {
     Object.freeze(state);
     let ns = Object.assign({}, state);
     
@@ -10,6 +10,7 @@ const commentReducer = (state = {}, action) => {
 
         case RECEIVE_ALL_COMMENTS:
             let comments = Object.values(action.comments);
+            debugger
             comments.forEach(comment => {
                 ns[comment.id] = comment
             });
@@ -21,8 +22,8 @@ const commentReducer = (state = {}, action) => {
             return ns;
 
         default:
-            break;
+            return state;
     }
 }
 
-export default commentReducer
+export default commentsReducer;
