@@ -103,7 +103,7 @@ class PhotoAdd extends React.Component {
 
             let photoData = new FormData();
             photoData.append('photo[description]', state.descriptions[filesUploaded].value === "" ? "No Description" : state.descriptions[filesUploaded].value);
-            photoData.append('photo[title]', state.titles[filesUploaded].value === "" ?  "Untitled" : state.titles[filesUploaded]);
+            photoData.append('photo[title]', state.titles[filesUploaded].value === "" ?  "Untitled" : state.titles[filesUploaded].value);
             photoData.append('photo[picture]', state.files[filesUploaded].file);
             this.props.createPhoto(photoData)
                 .then(filesUploaded++);

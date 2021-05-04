@@ -4,11 +4,6 @@ import { fetchAllUsers } from '../../actions/users_actions';
 import PhotoIndex from './photos_index';
 
 const mSTP = ({entities: { users, photos } }) => 
-// ({
-//     photos: Object.values(photos),
-//     users: users,
-
-// });
 {
     return {
         photos: Object.values(photos),
