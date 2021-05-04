@@ -8,27 +8,23 @@ class CommentsIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchAllComments();
-        debugger
     }
 
     
     render() {
-        debugger
         const { comments, photoId, photoOwnerId } = this.props;
-        // const photoComments = comments.filter(comment => {
-        //     debugger
-        //     return parseInt(comment.photo_id) == photoId;
-        // });
+        const photoComments = comments.filter(comment => {
+            return parseInt(comment.photo_id) == photoId;
+        });
 
         return (
             <div>
-                {/* <div>{photoComments.map(comment => {
+                <div>{photoComments.map(comment => {
 
                     return <CommentsIndexItemContainer key={comment.id} comment={comment} />
                 })}
-                </div> */}
+                </div>
                 <CommentAddContainer photoId={photoId}/>
 
             </div>

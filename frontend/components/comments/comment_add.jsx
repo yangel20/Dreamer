@@ -31,27 +31,31 @@ class CommentAdd extends React.Component {
     }
 
     render() {
-        let disabled;
+        let submitBtn;
 
         if (this.state.body !== "") {
-            disabled = false;
+            submitBtn = <input 
+            className="comment-box-btn"
+                value="Comment"
+                type="submit"
+            />;
         } else {
-            disabled = true;
+            submitBtn = null;
         }
 
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form 
+            className="add-comment-container"
+            onSubmit={this.handleSubmit}>
                 <textarea
+                    className="comment-box-photo-show"
                     onChange={this.handleImput()}
                     value={this.state.body}
                     id=""
+                    rows="4"
                     placeholder="Add a comment"
                 ></textarea>
-                <input 
-                    value="Comment"
-                    type="submit"
-                    disabled={disabled}
-                />
+                {submitBtn}
             </form>
         )
     }

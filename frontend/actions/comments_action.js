@@ -4,17 +4,17 @@ export const RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const DELETE_COMMENT = "DELETE_COMMENT";
 
-export const receiveAllComments = (Comments) => ({
+const receiveAllComments = (comments) => ({
     type: RECEIVE_ALL_COMMENTS,
-    Comments: Comments
+    comments: comments
 });
 
-export const receiveComment = (comment) => ({
+const receiveComment = (comment) => ({
     type: RECEIVE_COMMENT,
     comment: comment
 })
 
-export const deleteAComment = (commentId) => ({
+const deleteAComment = (commentId) => ({
     type: DELETE_COMMENT,
     commentId
 })
@@ -42,6 +42,6 @@ export const createComment = commentData => dispatch => (
 
 export const deleteComment = commentId => dispatch => (
     comments_util.deleteComment(commentId).then(() => (
-        dispatch(deleteComment(commentId))
+        dispatch(deleteAComment(commentId))
     ))
 );

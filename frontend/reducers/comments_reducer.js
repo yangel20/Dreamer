@@ -10,11 +10,9 @@ const commentsReducer = (state = {}, action) => {
 
         case RECEIVE_ALL_COMMENTS:
             let comments = Object.values(action.comments);
-            debugger
             comments.forEach(comment => {
                 ns[comment.id] = comment
             });
-
             return ns;
         
         case DELETE_COMMENT:

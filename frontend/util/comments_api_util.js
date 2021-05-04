@@ -6,7 +6,6 @@ export const fetchAllComments = () => {
 };
 
 export const createComment = (commentData) => {
-    debugger
     return $.ajax({
         method: "POST",
         url: "/api/comments",
