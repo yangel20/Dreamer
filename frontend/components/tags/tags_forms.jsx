@@ -1,6 +1,6 @@
 import React from 'react';
 
-class TagForm extends React.Component {
+class TagsForm extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -18,7 +18,6 @@ class TagForm extends React.Component {
     }
 
     handleInput() {
-        debugger
         return (e) => {
             e.preventDefault();
             this.setState({ name: e.target.value })
@@ -27,8 +26,13 @@ class TagForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createTag({ tag: this.state });
-        this.setState({ name: "" });
+
+        if (this.state.name !== "") {
+            this.props.createTag({ tag: this.state });
+            this.setState({ name: "" });
+        } else {
+            null
+        }
     }
 
     render() {
@@ -55,36 +59,6 @@ class TagForm extends React.Component {
             </form>
         )
     }
-
-    // comeback to this
-    // render() {
-    //     let submitOffFocus;
-    //     let handleInput;
-    //     if (this.state.name !== "") {
-    //         submitOffFocus = (this.handleSubmit);
-    //         handleInput = (this.handleInput());
-    //      } else {
-    //         submitOffFocus = (null);
-    //         handleInput = (null);
-    //     }
-
-    //     return (
-    //         <form
-    //         className="form-input-tag-name"
-    //         onSubmit={this.handleSubmit} 
-    //         >
-    //             <input
-    //                 className="input-tag-name"
-    //                 type="text"
-    //                 onChange={handleInput}
-    //                 defaultValue={this.state.name}
-    //                 placeholder="Add a tag"
-    //                 onBlur={submitOffFocus}
-    //             />
-
-    //         </form>
-    //     )
-    // }
 }
 
-export default TagForm;
+export default TagsForm;

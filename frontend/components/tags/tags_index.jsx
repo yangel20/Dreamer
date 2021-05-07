@@ -1,6 +1,6 @@
 import React from 'react';
-import TagFormContainer from './tag_form_container';
-// import TagsIndexItemContainer from './tags_index_item_container'
+import TagsFormContainer from './tags_form_container';
+import TagsIndexItemContainer from './tags_index_item_container'
 
 
 class TagsIndex extends React.Component {
@@ -11,6 +11,7 @@ class TagsIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchAllTags();
+        debugger
     }
 
     // toggleTagForm() {
@@ -20,10 +21,11 @@ class TagsIndex extends React.Component {
 
     render(){
         const { tags, photoId, photoOwnerId, currentUser } = this.props;
-
+        debugger
         const photoTags = tags.filter(tag => {
             return parseInt(tag.photo_id) == photoId;
         });
+        debugger
 
         let addTags;
         let tagForm;
@@ -32,30 +34,37 @@ class TagsIndex extends React.Component {
             addTags = ( 
                 <button
                     className="toggle-tag-form"
-                    onClick={this.toggleTagForm}
+                    // onClick={this.toggleTagForm}
                 >
                     Add tags
                 </button>
             )
-            tagForm = <TagFormContainer photoId={photoId}/>;
+            tagForm = <TagsFormContainer photoId={photoId}/>;
         } else {
             addTags = null;
             tagForm = null;
         }
 
         return (
-            <div>
-                <div>
-                    Tags
-                    {addTags}
+            <div className="tag-context-container">
+                <div className="tags-addtags">
+                    <div>
+
+                        Tags
+                    </div>
+                    <div>
+                        {addTags}
+
+                    </div>
                 </div>
-                <div>
                     {tagForm}
-                    {/* {photoTags.map(tag => {
+                <div className="all-tags-container">
+                    {photoTags.map(tag => {
+                        debugger
                         return (
                             <TagsIndexItemContainer key={tag.id} tag={tag} photoOwnerId={photoOwnerId} />
                         )
-                    })} */}
+                    })}
                 </div>
 
             </div>

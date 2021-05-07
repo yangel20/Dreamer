@@ -23,7 +23,7 @@ class PhotoShow extends React.Component {
 
     render() {
       return (
-        <div >
+        <div className="outer-photo-show-container">
           <div className="photo-show-container">
             <img className="img-photo-show" src={this.props.photo.pictureUrl} />
             {(this.props.photo.user_id === this.props.currentUser ) ?
@@ -34,9 +34,9 @@ class PhotoShow extends React.Component {
             <div className="title-description">
               <div className="title-photo-show">{this.props.photo.title}</div>
               <div className="description-photo-show">{this.props.photo.description}</div>
-            </div>
-            <div className="comments-tag-container">
               <CommentsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
+            </div>
+            <div className="photo-show-tag-container">
               <TagsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
             </div>
           </div>

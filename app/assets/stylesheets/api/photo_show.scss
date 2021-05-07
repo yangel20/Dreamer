@@ -1,10 +1,17 @@
+.outer-photo-show-container{
+    width: 100%;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    background: #F3F5F6;
+}
 .photo-show-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: #212124;
 }
 
@@ -23,19 +30,15 @@
 
 
 .photo-show-detail-container{
-    
+    display: flex;
     position: relative;
-    height: auto;
+    justify-content: space-around;
     width: 100%;
+    height: 100vh;
     background: #F3F5F6;
     padding-top: 20px;
-
-
 }
-.photo-show-detail-container{
 
-    
-}
 .title-description{
     width: 40%;
     margin-left: 10%;
@@ -53,7 +56,7 @@
     padding-top: 10px;
     margin-bottom: 10px;
 }
-.comments-tag-container{
+.photo-show-tag-container{
     display: flex;
     justify-content: space-between;
 }
@@ -62,14 +65,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 400px;
-    margin-left: 36%;
+    width: 100%;
+    
 }
 .comment-box-photo-show{
     width: 100%;
     margin-bottom: 8px;
     resize: none;
-    
 }
 
 
@@ -80,7 +82,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    margin-left: 36%;
+
 }
 
 .comment-container:hover {
@@ -118,6 +120,15 @@
 
 
 // tags input
+.tag-context-container{
+    width: 100%;
+}
+
+.tags-addtags{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 .form-input-tag-name{
  
@@ -125,4 +136,26 @@
 
 .input-tag-name:focus{
     border: 1px solid #008ddf; 
+}
+
+.all-tags-container{
+    display: flex;
+}
+
+.tag-container{
+    display: flex;
+    background-color: lightgrey;
+    width: max-content;
+    padding: 0px 5px;
+}
+
+.tag-delete-btn{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 1px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding-left: 4px;
 }
