@@ -124,14 +124,39 @@
     width: 100%;
 }
 
+#toggle-unhidden{
+    margin-bottom: 6px;
+}
+
 .tags-addtags{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 5px;
+    width: 300px;
 }
 
 .form-input-tag-name{
- 
+    margin-bottom: 6px;
+}
+
+.hidden{
+    display: none;
+}
+
+.toggle-tag-form {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    color: #1372e8;
+}
+
+.input-tag-name{
+    
 }
 
 .input-tag-name:focus{
@@ -140,13 +165,27 @@
 
 .all-tags-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 300px;
 }
 
 .tag-container{
     display: flex;
     background-color: lightgrey;
     width: max-content;
-    padding: 0px 5px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin: 0px 5px 5px 0px;
+    transition: all .15s ease-in-out;
+}
+
+.tag-container:hover {
+    background-color: #868d91;
+    color: white;
+    .tag-delete-btn{
+        display: flex;
+    }
 }
 
 .tag-delete-btn{
@@ -158,4 +197,6 @@
     cursor: pointer;
     outline: inherit;
     padding-left: 4px;
+    display: none;
+    color: white;
 }

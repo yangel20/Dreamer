@@ -7,7 +7,6 @@ const mSTP = state => ({
 })
 
 const mDTP = dispatch => {
-    debugger
     return { deleteTag: tagId => dispatch(deleteTag(tagId))}
 }
     

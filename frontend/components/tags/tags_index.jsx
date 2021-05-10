@@ -6,26 +6,22 @@ import TagsIndexItemContainer from './tags_index_item_container'
 class TagsIndex extends React.Component {
     constructor(props){
         super(props);
-        // this.toggleTagForm = this.toggleTagForm.bind(this);
+        this.toggleTagForm = this.toggleTagForm.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchAllTags();
-        debugger
     }
 
-    // toggleTagForm() {
-    //     debugger
-    //     document.getElementsByClassName("tag-form").classList.remove("hidden");
-    // }
+    toggleTagForm() {
+        document.getElementById("toggle-unhidden").classList.remove("hidden");
+    }
 
     render(){
         const { tags, photoId, photoOwnerId, currentUser } = this.props;
-        debugger
         const photoTags = tags.filter(tag => {
             return parseInt(tag.photo_id) == photoId;
         });
-        debugger
 
         let addTags;
         let tagForm;
@@ -34,7 +30,7 @@ class TagsIndex extends React.Component {
             addTags = ( 
                 <button
                     className="toggle-tag-form"
-                    // onClick={this.toggleTagForm}
+                    onClick={this.toggleTagForm}
                 >
                     Add tags
                 </button>
@@ -60,7 +56,6 @@ class TagsIndex extends React.Component {
                     {tagForm}
                 <div className="all-tags-container">
                     {photoTags.map(tag => {
-                        debugger
                         return (
                             <TagsIndexItemContainer key={tag.id} tag={tag} photoOwnerId={photoOwnerId} />
                         )

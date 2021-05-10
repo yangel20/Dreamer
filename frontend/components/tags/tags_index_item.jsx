@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {TiTimes} from 'react-icons/ti'
 
 class TagsIndexItem extends React.Component {
     constructor(props) {
@@ -15,7 +15,6 @@ class TagsIndexItem extends React.Component {
 
 
     render() {
-        debugger
         const { tag , currentUser, photoOwnerId } = this.props;
          
          let deleteTag;
@@ -27,7 +26,7 @@ class TagsIndexItem extends React.Component {
                     onClick={this.handleDelete}
                     type="button"
                 >
-                    X
+                    <TiTimes/>
                 </button>
             )
         } else {

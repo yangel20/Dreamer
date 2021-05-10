@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createTag } from '../../actions/tags_action';
-import TagsForm from './tags_forms';
+import TagsForm from './tags_form';
 
 const mSTP = state => ({
     currentUser: state.entities.users[state.session.id]

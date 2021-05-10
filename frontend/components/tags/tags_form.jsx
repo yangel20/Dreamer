@@ -44,7 +44,8 @@ class TagsForm extends React.Component {
         
         return (
             <form
-            className="form-input-tag-name"
+            className="hidden"
+            id="toggle-unhidden"
             onSubmit={this.handleSubmit} 
             >
                 <input
