@@ -1,10 +1,17 @@
+.outer-photo-show-container{
+    width: 100%;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    background: #F3F5F6;
+}
 .photo-show-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: #212124;
 }
 
@@ -23,19 +30,15 @@
 
 
 .photo-show-detail-container{
-    
+    display: flex;
     position: relative;
-    height: auto;
+    justify-content: space-around;
     width: 100%;
+    height: 100vh;
     background: #F3F5F6;
     padding-top: 20px;
-
-
 }
-.photo-show-detail-container{
 
-    
-}
 .title-description{
     width: 40%;
     margin-left: 10%;
@@ -53,19 +56,22 @@
     padding-top: 10px;
     margin-bottom: 10px;
 }
+.photo-show-tag-container{
+    display: flex;
+    justify-content: space-between;
+}
 
 .add-comment-container{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 40%;
-    margin-left: 10%;
+    width: 100%;
+    
 }
 .comment-box-photo-show{
     width: 100%;
     margin-bottom: 8px;
     resize: none;
-    
 }
 
 
@@ -75,8 +81,8 @@
     margin-bottom: 0.5%;
     justify-content: space-between;
     align-items: flex-start;
-    width: 40%;
-    margin-left: 10%;
+    width: 100%;
+
 }
 
 .comment-container:hover {
@@ -97,6 +103,7 @@
 .comment-box-photo-show:focus{
     border: 1px solid #008ddf; 
 }
+
 .comment-box-btn{
     border: none;
     background-color:  #008ddf;
@@ -108,4 +115,88 @@
 
 .comment-box-btn:hover{
     background-color:  #1372e8;
+}
+
+
+
+// tags input
+.tag-context-container{
+    width: 100%;
+}
+
+#toggle-unhidden{
+    margin-bottom: 6px;
+}
+
+.tags-addtags{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.form-input-tag-name{
+    margin-bottom: 6px;
+}
+
+.hidden{
+    display: none;
+}
+
+.toggle-tag-form {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    color: #1372e8;
+}
+
+.input-tag-name{
+    
+}
+
+.input-tag-name:focus{
+    border: 1px solid #008ddf; 
+}
+
+.all-tags-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 300px;
+}
+
+.tag-container{
+    display: flex;
+    background-color: lightgrey;
+    width: max-content;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin: 0px 5px 5px 0px;
+    transition: all .15s ease-in-out;
+}
+
+.tag-container:hover {
+    background-color: #868d91;
+    color: white;
+    .tag-delete-btn{
+        display: flex;
+    }
+}
+
+.tag-delete-btn{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 1px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding-left: 4px;
+    display: none;
+    color: white;
 }

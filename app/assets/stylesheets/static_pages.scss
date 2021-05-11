@@ -12,7 +12,8 @@
     z-index: 999;
 }
 .signup-signout{
-    padding-right: 35px;
+    display: flex;
+    width: 100px;
 }
 
 
@@ -51,7 +52,7 @@
 //nav loggen in
 
 .logged-in-nav{
-    background-color:rgba(38, 38, 38, 0.56);
+    background-color:rgba(29, 29, 29, 0.616);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,13 +60,16 @@
     z-index: 999;
 }
 
+.link-to-upload{
+    color: #008ddf;
+}
+
 .header-button{
-    background-color: rgb(221, 200, 80);
+    background-color: rgb(121, 0, 0);
     border: none;
-    color: black;
+    color: whitesmoke;
     padding: 6px 20px;
     text-decoration: none;
-    // display: inline-block;
     font-size: 16px;
     border-radius: 8px;
     font-weight: 600;

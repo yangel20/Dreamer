@@ -1,6 +1,7 @@
 import React from 'react';
 import CommentsIndexContainer from '../comments/comments_index_container';
 import { BsTrash } from 'react-icons/bs';
+import TagsIndexContainer from '../tags/tags_index_container';
 
 class PhotoShow extends React.Component {
     constructor(props){
@@ -22,7 +23,7 @@ class PhotoShow extends React.Component {
 
     render() {
       return (
-        <div >
+        <div className="outer-photo-show-container">
           <div className="photo-show-container">
             <img className="img-photo-show" src={this.props.photo.pictureUrl} />
             {(this.props.photo.user_id === this.props.currentUser ) ?
@@ -33,8 +34,11 @@ class PhotoShow extends React.Component {
             <div className="title-description">
               <div className="title-photo-show">{this.props.photo.title}</div>
               <div className="description-photo-show">{this.props.photo.description}</div>
+              <CommentsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
             </div>
-            <CommentsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
+            <div className="photo-show-tag-container">
+              <TagsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
+            </div>
           </div>
         </div>
       )
