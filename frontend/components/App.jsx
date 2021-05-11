@@ -27,12 +27,12 @@ const App = () => (
         {/* //splash page that has everthing but nav bar */}
     </header>
     <Switch>
-        <ProtectedRoute path="/upload" component={PhotoAddContainer} />
         <Route path="/photos/:photoId" component={PhotoShowContainer} />
         <Route path="/explore" component={PhotoIndex} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={SplashContainer} />
+        <ProtectedRoute path="/upload" component={PhotoAddContainer} />
     </Switch>
     <Footer />
   </div>
