@@ -24,7 +24,6 @@ const deleteAComment = (commentId) => ({
 export const fetchAllComments = () => dispatch => (
     comments_util.fetchAllComments().then(comments => (
         dispatch(receiveAllComments(comments))
-        
     ))
 );
 
