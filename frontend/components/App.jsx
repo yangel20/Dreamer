@@ -18,13 +18,9 @@ import PhotoShowContainer from "./explore/photo_show_container";
 import PhotoAddContainer from "./explore/photo_add_container"
 
 const App = () => (
-  <div>
+  <div className="everything-container">
     <header>
-      {/* <navbar/> */}
-        {/* <h1 className="intro">Dreamer</h1> */}
         <Navbar />
-        {/* //nav bar  */}
-        {/* //splash page that has everthing but nav bar */}
     </header>
     <Switch>
         <Route path="/photos/:photoId" component={PhotoShowContainer} />

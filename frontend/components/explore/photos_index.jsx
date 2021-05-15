@@ -43,11 +43,14 @@ class PhotoIndex extends React.Component {
         const { photos, users } = this.props;
 
         return (
-            <div>
-                hello
-                {/* {photos.map(photo =>
-                <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
-                )} */}
+            <div className="outter-photo-container">
+                <h1 className="explore" >Explore</h1>
+                <div className="photo-container">
+
+                    {photos.map(photo =>
+                    <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
+                    )}
+                </div>
             </div>
         )
     }
