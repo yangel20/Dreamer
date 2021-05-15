@@ -1,0 +1,2 @@
+module Api::PhotoAlbumLinksHelper
+end

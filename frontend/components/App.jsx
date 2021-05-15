@@ -18,7 +18,7 @@ import PhotoShowContainer from "./explore/photo_show_container";
 import PhotoAddContainer from "./explore/photo_add_container"
 
 const App = () => (
-  <div>
+  <div className="everything-container">
     <header>
         <Navbar />
     </header>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PhotosIndexItem from './photos_index_item';
 // import { url_for} from 'flask'; 
 
 class PhotoIndex extends React.Component {
@@ -16,28 +17,42 @@ class PhotoIndex extends React.Component {
 
     render(){
 
+        // return (
+        // <div className="photo-container">
+        //     {this.props.photos.map(photo =>
+        //     <div className="photo-box" key={photo.id}>
+
+
+        //     <div className="inner-box">
+        //         <Link className="link-photo" to={`photos/${photo.id}`}>
+        //             <img className="index-photo" src={photo.pictureUrl} />
+        //         </Link>
+        //         <div className="photo-title">
+        //             <div >{photo.title}</div>
+        //             <div className="photo-arthur">by {this.props.users[photo.user_id].username}</div>
+        //         </div>
+        //     </div>
+
+
+        //     </div>
+        //     )}
+        // </div>
+           
+        // );
+
+        const { photos, users } = this.props;
+
         return (
-        <div className="photo-container">
-            {this.props.photos.map(photo =>
-            <div className="photo-box" key={photo.id}>
+            <div className="outter-photo-container">
+                <h1 className="explore" >Explore</h1>
+                <div className="photo-container">
 
-
-            <div className="inner-box">
-                <Link className="link-photo" to={`photos/${photo.id}`}>
-                    <img className="index-photo" src={photo.pictureUrl} />
-                </Link>
-                <div className="photo-title">
-                    <div >{photo.title}</div>
-                    <div className="photo-arthur">by {this.props.users[photo.user_id].username}</div>
+                    {photos.map(photo =>
+                    <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
+                    )}
                 </div>
             </div>
-
-
-            </div>
-            )}
-        </div>
-           
-        );
+        )
     }
 };
 
