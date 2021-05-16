@@ -12,8 +12,8 @@ const mSTP = ({entities: { users, photos } }) =>
 };
 
 const mDTP = dispatch => ({
-    fetchAllPhotos: () => (dispatch(fetchAllPhotos())),
-    fetchAllUsers: () => (dispatch(fetchAllUsers()))
+    fetchAllPhotos: () => dispatch(fetchAllPhotos()),
+    fetchAllUsers: () => dispatch(fetchAllUsers())
 });
 
 export default connect(mSTP, mDTP)(PhotoIndex);

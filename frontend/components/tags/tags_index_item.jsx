@@ -1,5 +1,6 @@
 import React from 'react';
 import {TiTimes} from 'react-icons/ti'
+import { Link } from 'react-router-dom';
 
 class TagsIndexItem extends React.Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class TagsIndexItem extends React.Component {
         return (
             <div className="tag-container">
 
-                    <div className="tag-name" > {tag.name} </div>
+                    <Link className="tag-name" to={`/photos/tag/${tag.name}`}> {tag.name} </Link>
                     {deleteTag}
 
             </div>

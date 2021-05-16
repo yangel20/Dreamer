@@ -16,13 +16,14 @@ import PhotoIndex from "./explore/photos_index_container";
 import { AuthRoute, ProtectedRoute } from "../util/routes_util";
 import PhotoShowContainer from "./explore/photo_show_container";
 import PhotoAddContainer from "./explore/photo_add_container"
-
+import TagShowContainer from "./tags/tag_show_container"
 const App = () => (
-  <div className="everything-container">
+  <div >
     <header>
         <Navbar />
     </header>
     <Switch>
+        <Route path="/photos/tag/:tagName" component={TagShowContainer} />
         <Route path="/photos/:photoId" component={PhotoShowContainer} />
         <Route path="/explore" component={PhotoIndex} />
         <AuthRoute path="/login" component={LoginFormContainer} />

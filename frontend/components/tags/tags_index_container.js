@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchAllTags } from '../../actions/tags_action'
+import { fetchAllTags } from '../../actions/tags_action';
 import TagsIndex from './tags_index';
 
 const mSTP = state =>( {
@@ -8,7 +8,7 @@ const mSTP = state =>( {
 });
 
 const mDTP = dispatch => ({
-    fetchAllTags: () =>(dispatch(fetchAllTags()))
+    fetchAllTags: () => dispatch(fetchAllTags())
 });
 
 export default connect(mSTP, mDTP)(TagsIndex);
