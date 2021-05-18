@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "./navbar_container";
 import SignupFormContainer from './session_form/signup_form_container';
@@ -15,20 +14,22 @@ import Footer from "./footer";
 import PhotoIndex from "./explore/photos_index_container";
 import { AuthRoute, ProtectedRoute } from "../util/routes_util";
 import PhotoShowContainer from "./explore/photo_show_container";
-import PhotoAddContainer from "./explore/photo_add_container"
-import TagShowContainer from "./tags/tag_show_container"
+import PhotoAddContainer from "./explore/photo_add_container";
+import TagShowContainer from "./tags/tag_show_container";
+import UserShowContainer from './user/user_show_container';
 const App = () => (
   <div >
     <header>
         <Navbar />
     </header>
     <Switch>
-        <Route path="/photos/tag/:tagName" component={TagShowContainer} />
-        <Route path="/photos/:photoId" component={PhotoShowContainer} />
-        <Route path="/explore" component={PhotoIndex} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={SplashContainer} />
+        <Route path="/explore" component={PhotoIndex} />
+        <Route exact path="/users/:userId" component={UserShowContainer} />
+        <Route path="/photos/tag/:tagName" component={TagShowContainer} />
+        <Route path="/photos/:photoId" component={PhotoShowContainer} />
         <ProtectedRoute path="/upload" component={PhotoAddContainer} />
     </Switch>
     <Footer />
@@ -36,3 +37,4 @@ const App = () => (
 );
 
 export default App;
+
