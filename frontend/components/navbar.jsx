@@ -16,7 +16,7 @@ const navbar = ({ currentUser, logout }) => {
   );
   const navLoggedIn = () => (
     <nav className="logged-in-nav">
-      <Link className="DreamerLogo" to="/"> <BsCloudFill size="25"/> Dreamer </Link>
+      <Link className="DreamerLogo" to="/explore"> <BsCloudFill size="25"/> Dreamer </Link>
       <h2 className="header-name">Hello, {currentUser.username}!</h2>
       <input className="search-bar" type="text" placeholder="Dreams.." ></input>
       <Link className="link-to-upload" to="/upload" ><BsCloudUpload size="30" /></Link>

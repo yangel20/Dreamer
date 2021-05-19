@@ -4,7 +4,6 @@ import { RECEIVE_ALL_USERS } from '../actions/users_actions';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
-  debugger
   switch(action.type) {
 
     case RECEIVE_CURRENT_USER:
@@ -15,7 +14,6 @@ const usersReducer = (state = {}, action) => {
       Object.values(action.users.users).forEach(user => {
         newState[user.id] = user
       });
-      debugger
       // Object.assign({}, state, Object.values(action.users));
       return newState;
 
