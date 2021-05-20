@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AlbumFormItem from './album_form_item';
 
 class AlbumForm extends React.Component {
     constructor(props) {
@@ -11,6 +12,7 @@ class AlbumForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleInput = this.handleInput.bind(this);
+        this.handlePhotoClick = this.handlePhotoClick.bind(this);
     }
 
     componentDidMount() {
@@ -27,6 +29,21 @@ class AlbumForm extends React.Component {
         return e => {
             e.preventDefault();
             this.setState({ [field]: e.target.value });
+        }
+    }
+
+    handlePhotoClick(e) {
+        let photoId = parseInt(e.currentTarget.id);
+        let checkPhotoAlreadySelected = this.state.photo_ids.indexOf(photoId);
+        let new_photo_ids = Array.from(this.state.photo_ids);
+        if (checkPhotoAlreadySelected === -1) {
+            e.currentTarget.classList.add("selected-for-album");
+            new_photo_ids.push(photoId);
+            this.setState({ photo_ids: new_photo_ids });
+        } else {
+            e.currentTarget.classList.remove("selected-for-album");
+            new_photo_ids.splice(checkPhotoAlreadySelected, 1);
+            this.setState({ photo_ids: new_photo_ids });
         }
     }
 
@@ -51,8 +68,19 @@ class AlbumForm extends React.Component {
         } else {
             disabled = false;
         }
+         
+        debugger
+        let photoArray = (
+            userPhotos.map(photo => {
+                return (
+                    <img key={photo.id} id={photo.id} className="album-form-photo" src={photo.pictureUrl} onClick={this.handlePhotoClick} />
+                )
+            })
+        )
 
         return (
+
+
             <form className="album-form" onSubmit={this.handleSubmit}>
                 <div className="album-form-left">
                     <div className="album-form-inputs">
@@ -79,6 +107,9 @@ class AlbumForm extends React.Component {
                             </Link>
                         </div>
                     </div>
+                </div>
+                <div className="album-form-photos">
+                    {photoArray}
                 </div>
             </form>
         )

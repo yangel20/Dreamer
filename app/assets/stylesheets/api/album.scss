@@ -1,82 +1,121 @@
 .album-form {
     display: flex;
-    background-color: #fff;
-}
-.album-form-left {
-    width: 250px;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    font-family: Arial,Helvetica,sans-serif;
 
+    .album-form-left {
+        display: flex;
+        margin: 0 15px;
+        width: 250px;
+        
+        p {
+            margin: 10px 0px 10px 0px;
+            font-size: 16px;
+        }
 
-}
+        .album-form-inputs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
 
-.album-form-inputs {
+            input {
+                margin-bottom: 10px;
+                width: 100%;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 3px;
+                background-color: #ffffd3;
+                border: 1px inset #e9e9ae;
+            }
+            
+            textarea {
+                height: 303px;
+                width: 220px;
+                background-color: #ffffd3;
+                border: 1px inset #e9e9ae;
+                margin-bottom: 10px;
+            }
+            textarea:focus {
+                border-radius: 4px;
+                border: 2px inset blue;
+            }
+            input:focus {
+                border-radius: 4px;
+                border: 2px inset blue;
+            }
+        }
 
-    #album-name {
-        margin-bottom: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 3px;
-        background-color: #ffffd3;
-        border: 1px inset #e9e9ae;
-        width: 214px;
-        height: 23px;
+        .album-buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 220px;
+
+            input {
+                width: 55px;
+                height: 30px;
+                border-radius: 4px;
+                font-size: 16px;
+                color: white;
+                background: #0063dc;
+                margin-bottom: 0%;
+                border: 1px inset transparent;
+            }
+
+            input:hover {
+                background: #0054bd;
+            }
+
+            input[disabled] {
+                color: #bbb;
+                cursor: default;
+                background: #e6e6e6;
+            }
+
+            a {
+                width: 68px;
+                display: flex;
+                border: 1px;
+                padding: 3px;
+                align-items: center;
+                height: 24px;
+                border-radius: 4px;
+                font-size: 16px;
+                text-decoration: none;
+                background: #ddd;
+                color: #666;
+            }
+
+            a:hover {
+                background: #cfcfcf;
+            }
+        }
+
     }
 
-    #album-description {
-        width: 214px;
-        height: 340px;
-        background-color: #ffffd3;
-        border: 1px inset #e9e9ae;
-        margin-bottom: 10px;
-    }
-}
+    .album-form-photos {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 10px 5px 10px;
+        border-top: 1px solid #cecece;
+        background-color: #c7c7c7;
+        width: 100%;
+        
 
-.album-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 121px;
-
-    input, input[disabled], a {
-        background-color: rgba(221, 221, 221, 1);
-        color: rgba(102, 102, 102, 1);
-        padding: 5px 9px;
-        height: 14px;
-        font-size: 12px;
-        font-weight: bold;
-        border-radius: 4px;
+        img {
+            margin: 5px;
+            display: block;
+            max-width:230px;
+            max-height:75px;
+            width: auto;
+            height: auto;
+        }
     }
 
-    input[disabled]:hover {
-        background-color: rgba(221, 221, 221, 1);
-        color: rgba(102, 102, 102, 1);
-    }
-
-    input {
-        background-color: rgba(0, 99, 220, 1);
-        color: rgba(255, 255, 255, 1);
-        box-sizing: content-box;
-        margin: 0;
-        width: 32px;
-    }
-
-    input:hover {
-        background-color: rgba(0, 84, 189, 1);
-    }
-
-    input[disabled] {
-        opacity: 0.5;
-    }
-
-    a {
-        width: 50px;
-        text-decoration: none;
-    }
-
-    a:hover {
-        background-color: rgba(221, 221, 221, 1);
-    }
-
-    input[disabled] + a:hover {
-        background-color: rgba(207, 207, 207, 1);
+    .selected-for-album {
+        border: 1px solid blue;
     }
 }
