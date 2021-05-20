@@ -5,7 +5,7 @@ export const fetchAllAlbums = () => {
     })
 };
 
-export const createAlbums = (albumData) => {
+export const createAlbum = (albumData) => {
     return $.ajax({
         method: "POST",
         url: "/api/albums",
@@ -13,14 +13,14 @@ export const createAlbums = (albumData) => {
     })
 };
 
-export const fetchAlbums = (albumId) => {
+export const fetchAlbum = (albumId) => {
     return $.ajax({
         method: "GET",
         url: `/api/albums/${albumId}`
     })
 };
 
-export const deleteAlbums = (albumId) => (
+export const deleteAlbum = (albumId) => (
     $.ajax({
       method: "DELETE",
       url: `/api/albums/${albumId}`

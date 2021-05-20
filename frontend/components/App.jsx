@@ -17,6 +17,8 @@ import PhotoShowContainer from "./explore/photo_show_container";
 import PhotoAddContainer from "./explore/photo_add_container";
 import TagShowContainer from "./tags/tag_show_container";
 import UserShowContainer from './user/user_show_container';
+import AlbumFormContainer from './albums/album_form_container'
+
 const App = () => (
   <div >
     <header>
@@ -26,11 +28,12 @@ const App = () => (
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={SplashContainer} />
-        <Route path="/explore" component={PhotoIndex} />
+        <Route exact path="/explore" component={PhotoIndex} />
         <Route exact path="/users/:userId" component={UserShowContainer} />
-        <Route path="/photos/tag/:tagName" component={TagShowContainer} />
-        <Route path="/photos/:photoId" component={PhotoShowContainer} />
-        <ProtectedRoute path="/upload" component={PhotoAddContainer} />
+        <Route exact path="/photos/tag/:tagName" component={TagShowContainer} />
+        <Route exact path="/photos/:photoId" component={PhotoShowContainer} />
+        <ProtectedRoute exact path="/photos/organize/new_set" component={AlbumFormContainer} />
+        <ProtectedRoute exact path="/upload" component={PhotoAddContainer} />
     </Switch>
     <Footer />
   </div>

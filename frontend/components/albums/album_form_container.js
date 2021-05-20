@@ -1,4 +1,4 @@
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import { createAlbum } from '../../actions/albums_action';
 import { fetchAllPhotos } from '../../actions/photos_actions';
 import AlbumForm from './album_form';
@@ -12,7 +12,7 @@ const mSTP = (state) => {
 
 const mDTP = dispatch => ({
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
-    createAlbum : () => dispatch(createAlbum ()),
+    createAlbum : (album) => dispatch(createAlbum(album)),
 });
 
 export default connect(mSTP, mDTP)(AlbumForm);

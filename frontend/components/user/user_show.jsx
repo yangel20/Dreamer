@@ -1,6 +1,7 @@
 import React from 'react';
 import UserHeader from './user_header';
 import { Link } from 'react-router-dom';
+import UserShowItem from './user_show_item';
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -22,12 +23,12 @@ class UserShow extends React.Component {
 
     render() {
         const { user, photos, albums, location, currUserId} = this.props;
-        debugger
         const userPhotos = photos.filter(photo => {
             return parseInt(photo.user_id) === user.id;
         });
 
-
+        debugger
+        
         return (
 
             <div className="user-container">
@@ -42,6 +43,17 @@ class UserShow extends React.Component {
                         </Link>
                     </div>
                 </div>
+                <div className="outter-photo-container">
+
+                <div className="photo-container">
+                {userPhotos.map(photo =>
+                <UserShowItem key={photo.id} photo={photo} username={user.username} />
+                )}
+                </div>
+                </div>
+                <Link to="/photos/organize/new_set">
+                    <p>New album</p>
+                </Link>
                 <div className="space">
                 </div>
             </div>

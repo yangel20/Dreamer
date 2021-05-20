@@ -11,8 +11,8 @@ class PhotoAdd extends React.Component {
             titles: [],
             descriptions: [],
             selected: null
-
         }
+
         this.deleteThumbnail = this.deleteThumbnail.bind(this);
         this.deselect = this.deselect.bind(this);
         this.select = this.select.bind(this);
@@ -29,7 +29,6 @@ class PhotoAdd extends React.Component {
         delete ns.descriptions[index];
         ns.selected = null;
         this.setState(ns);
-
     }
 
     deselect(e) {
