@@ -27,8 +27,54 @@ class UserShow extends React.Component {
             return parseInt(photo.user_id) === user.id;
         });
 
-        debugger
-        
+        const albumOwner = location.pathname.includes(currUserId);
+
+        // let display;
+
+        // if (this.props.location.pathname.includes("albums")) {
+        //     if (userAlbums.length === 0 && albumOwner) {
+        //         display = (
+        //             <div className="albums-body">
+        //                 <div className="albums-toolbar">
+        //                     <Link to="/photos/organize/new_set">
+        //                         <p>New album</p>
+        //                     </Link>
+        //                 </div>
+        //                 <p className="no-album-text">{this.props.user.username} does not have any albums.</p>
+        //             </div>
+        //         )
+        //     } else if (userAlbums.length > 0 && albumOwner){
+        //         display = (
+        //             <div className="albums-body">
+        //                 <div className="albums-toolbar">
+        //                     <Link to="/photos/organize/new_set">
+        //                         <p>New album</p>
+        //                     </Link>
+        //                 </div>
+        //                 <div className="albums-array">
+        //                     <div className="albums-grid">
+        //                         {userAlbums.map(album => <UserShowAlbum key={album.id} album={album} photos={photos} currentUser={user} deleteAlbum={this.props.deleteAlbum} history={this.props.history} />)}
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         )
+        //     } else if (userAlbums.length === 0 && !albumOwner) {
+        //         display = (
+        //             <div className="albums-body">
+        //                 <p className="no-album-text">{this.props.user.username} does not have any albums.</p>
+        //             </div>
+        //         )
+        //     }  else if (userAlbums.length > 0 && !albumOwner){
+        //         display = (
+        //             <div className="albums-body">
+        //             </div>
+
+        //         )
+        // }
+
+
+
+
         return (
 
             <div className="user-container">
@@ -45,11 +91,11 @@ class UserShow extends React.Component {
                 </div>
                 <div className="outter-photo-container">
 
-                <div className="photo-container">
-                {userPhotos.map(photo =>
-                <UserShowItem key={photo.id} photo={photo} username={user.username} />
-                )}
-                </div>
+                    <div className="photo-container">
+                        {userPhotos.map(photo =>
+                        <UserShowItem key={photo.id} photo={photo} username={user.username} />
+                        )}
+                    </div>
                 </div>
                 <Link to="/photos/organize/new_set">
                     <p>New album</p>
