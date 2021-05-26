@@ -50,6 +50,7 @@ class PhotoIndex extends React.Component {
                     <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
                     )}
                 </div>
+                <div className="space"/>
             </div>
         )
     }

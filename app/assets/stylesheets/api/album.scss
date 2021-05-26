@@ -103,6 +103,8 @@
         border-top: 1px solid #cecece;
         background-color: #c7c7c7;
         width: 100%;
+        min-height: 700px;
+        // padding-bottom: 200px;
         
 
         img {
@@ -119,3 +121,204 @@
         border: 1px solid blue;
     }
 }
+
+.albums-toolbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    .link-to-new-album{
+        display: flex;
+        text-decoration: none;
+        align-items: flex-end;
+        p {
+            color: #737b80;
+        }
+    }
+}
+
+.img-new-album {
+    background: url(https://combo.staticflickr.com/ap/build/images/sprites/icons-32dc0fa1.png) -413px -178px no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 7px;
+    top: 2px;
+    position: relative;
+}
+
+.albums-array {
+    width: 80%;
+    margin: 0 auto;
+
+    .albums-grid {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1536px;
+
+        .album-item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 240px;
+            width: 240px;
+            margin: 12px;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                width: 240px;
+                height: 240px;
+                background:linear-gradient(0deg,rgba(0,0,0,.9) 0,transparent 50%,transparent);
+
+                .album-overlay {
+                    transition: 0.2s;
+                    position: absolute;
+                    bottom: 20px;
+                    color: rgba(255, 255, 255, 1);
+                    width: 200px;
+                    height: auto;
+                    padding: 0 20px;
+
+                    .album-name {
+                        font-size: 20px;
+                        font-weight: 100;
+                        margin: 2px;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+                    }
+
+                    .num-photos {
+                        text-shadow: 0 1px 1px #000;
+                        font-size: 14px;
+                        font-weight: 600;
+                        margin: 2px;
+                    }
+                }
+            }
+
+            .album-actions {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                transition: 0.2s;
+                color: rgba(255, 255, 255, 1);
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 0;
+
+                .album-delete-button {
+                    background: none;
+                    color: inherit;
+                    border: none;
+                    padding: 0;
+                    font: inherit;
+                    cursor: pointer;
+                    outline: inherit;
+
+                }
+                    svg {
+                        transition: 0.2s;
+                        height: 0;
+                        width: 22px;
+                        padding: 12px 18px 12px 13px;
+                    }
+
+                    svg:hover {
+                        color: rgba(240, 0, 0, 1);
+                    }
+            }
+        }
+
+        .album-item:hover {
+
+            .album-overlay {
+                bottom: 50px;
+            }
+
+            .album-actions {
+                height: 50px;
+
+                svg {
+                    transition: 0.2s;
+                    height: 26px;
+                }
+            }
+        }
+
+    }
+}
+
+//album-show
+
+.show-album-container{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+
+    .album-info{
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        width: 100%;
+        color: white;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+    }
+
+    .dim {
+        background: rgba(0, 0, 0, 0.45);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        .album-info-head {
+            width: 612px;
+            height: 81px;
+            padding: 70px 10px 5px 10px;
+            margin: 0 auto;
+            
+
+            h3 {
+                font-size: 32px;
+                font-weight: 300;
+                margin: 0;
+            }
+
+            p {
+                font-size: 18px;
+                font-family: "Georgia, serif";
+                font-style: italic;
+                opacity: 0.8;
+                margin: 0;
+                margin-top: 13px;
+            }
+        }
+
+        .num-photos {
+            font-size: 14px;
+        }
+
+        .album-return-link {
+            margin-top: 70px;
+            padding: 0 12px;
+
+            a {
+                font-size: 15px;
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+

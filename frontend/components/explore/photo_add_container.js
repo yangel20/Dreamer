@@ -4,7 +4,6 @@ import PhotoAdd from './photo_add';
 
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         photo: state.entities.photos[ownProps.match.params.photoId] || "",
         currentUser: state.entities.users[state.session.id]

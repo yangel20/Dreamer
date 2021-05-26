@@ -6,12 +6,13 @@ import UserShow from './user_show';
 
 
 const mSTP = (state, ownProps) =>{
-    debugger
     return{
-    photos: Object.values(state.entities.photos),
+    photos: state.entities.photos,
     albums: Object.values(state.entities.albums),
     user: state.entities.users[ownProps.match.params.userId],
-    currUserId: state.session.id}
+    currUserId: state.session.id,
+    currentUser: state.entities.users[state.session.id]
+}
 };
 
 const mDTP = dispatch => ({

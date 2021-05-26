@@ -34,7 +34,6 @@
     position: relative;
     justify-content: space-around;
     width: 100%;
-    height: 100vh;
     background: #F3F5F6;
     padding-top: 20px;
 }
@@ -91,6 +90,7 @@
     .comment-delete-btn{
         display: block;
     }
+    background-color: white;
 }
 
 .comment-delete-btn{
@@ -117,6 +117,15 @@
 
 .comment-box-btn:hover{
     background-color:  #1372e8;
+}
+
+.comment-username{
+    color: #006dac;
+    text-decoration: none;
+}
+
+.comment-username:hover {
+    text-decoration: underline;
 }
 
 

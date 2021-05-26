@@ -2,44 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// .photo-container{
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-// }
-
-
-// .photo-box{
-//   display: flex;
-//   justify-content: flex-start;
-//   flex-direction: column;
-//   height: fit-content;
-//   max-width: 200px;
-
-// }
-
-
-// .inner-box img{
-//   position: relative;
-//   display: block;
-//   object-fit: cover;
-//   max-width: 190px;
-//   max-height: 100%;
-//   border: 2px solid white;
-  
-// }
-
-// .inner-box:hover .photo-title{
-//   visibility: visible;
-
-// }
-
-// .photo-title{
-//   position: absolute;
-//   visibility: hidden;
-//   color: red;
-
-// }
 
 .outter-photo-container{
   display: flex;
@@ -62,14 +24,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100vh;
 }
 
 .photos-container{
   margin: .17rem;
   flex-grow: 1;
   position: relative;
-
 }
 
 .photos-container:hover{
@@ -119,8 +79,4 @@
 .everything-container{
   display: flex;
   flex-direction: column;
-}
-.space{
-  width: 100%;
-  height: 900px;
 }

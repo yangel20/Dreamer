@@ -69,7 +69,6 @@ class AlbumForm extends React.Component {
             disabled = false;
         }
          
-        debugger
         let photoArray = (
             userPhotos.map(photo => {
                 return (

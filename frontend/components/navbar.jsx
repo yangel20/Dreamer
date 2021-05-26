@@ -17,8 +17,15 @@ const navbar = ({ currentUser, logout }) => {
   const navLoggedIn = () => (
     <nav className="logged-in-nav">
       <Link className="DreamerLogo" to="/explore"> <BsCloudFill size="25"/> Dreamer </Link>
+      <div className="dropdown">
+        <button className="drop-down-btn" >you</button>
+        <div className="drop-down-content">
+          <Link to={`/users/${currentUser.id}`}>Photostream</Link>
+          <Link to={`/users/${currentUser.id}/albums`}>Album</Link>
+
+        </div>
+      </div>
       <h2 className="header-name">Hello, {currentUser.username}!</h2>
-      <input className="search-bar" type="text" placeholder="Dreams.." ></input>
       <Link className="link-to-upload" to="/upload" ><BsCloudUpload size="30" /></Link>
       <button className="header-button" onClick={logout}>Log Out</button>
     </nav>

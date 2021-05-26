@@ -17,8 +17,8 @@ import PhotoShowContainer from "./explore/photo_show_container";
 import PhotoAddContainer from "./explore/photo_add_container";
 import TagShowContainer from "./tags/tag_show_container";
 import UserShowContainer from './user/user_show_container';
-import AlbumFormContainer from './albums/album_form_container'
-import AlbumShowContainer from './albums/album_show_container'
+import AlbumFormContainer from './albums/album_form_container';
+import AlbumShowContainer from './albums/album_show_container';
 
 const App = () => (
   <div >
@@ -30,7 +30,8 @@ const App = () => (
         <AuthRoute path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={SplashContainer} />
         <Route exact path="/explore" component={PhotoIndex} />
-        {/* <Route exact path="/users/:userId/albums/:albumId" component={AlbumShowContainer} /> */}
+        <Route exact path="/users/:userId/albums/:albumId" component={AlbumShowContainer} />
+        <Route exact path="/users/:userId/albums" component={UserShowContainer} />
         <Route exact path="/users/:userId" component={UserShowContainer} />
         <Route exact path="/photos/tag/:tagName" component={TagShowContainer} />
         <Route exact path="/photos/:photoId" component={PhotoShowContainer} />

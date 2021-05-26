@@ -36,6 +36,7 @@ class TagShow extends React.Component {
                         <TagShowItem key={photoId} photo={photos[photoId]} username={users[photos[photoId].user_id].username} tag={tagName}/>
                         )}
                     </div>
+                    <div className="space" />
                 </div>
             )
         } else {

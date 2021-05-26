@@ -40,6 +40,7 @@ class PhotoShow extends React.Component {
               <TagsIndexContainer photoId={this.props.photo.id} photoOwnerId={this.props.photo.user_id}/>
             </div>
           </div>
+          <div className="space"/>
         </div>
       )
     }

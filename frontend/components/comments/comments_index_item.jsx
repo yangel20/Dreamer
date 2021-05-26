@@ -1,5 +1,6 @@
 import React from 'react';
 import { BsTrash } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 class CommentsIndexItem extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class CommentsIndexItem extends React.Component {
     
     render() {
         let deleteComment;
-        const { comment, users, currentUser, /*photoOwnerId*/ } = this.props;
+        const { comment, users, currentUser, photoOwnerId } = this.props;
         currentUser.id === comment.user_id ?
             deleteComment = (
                 <div
@@ -32,7 +33,7 @@ class CommentsIndexItem extends React.Component {
     
             <div className="comment-container">
                 <div>
-                    <h3 className="comment-username" >{users[comment.user_id].username}</h3>
+                    <Link to={`/users/${comment.user_id}`} className="comment-username" >{users[comment.user_id].username}</Link>
                     <p className="comment-body" >{comment.body}</p>
                 </div>
                 {deleteComment}

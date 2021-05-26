@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import AlbumShowItem from './album_show_item'
 
 class AlbumShow extends React.Component {
     constructor(props) {
@@ -15,33 +16,33 @@ class AlbumShow extends React.Component {
 
     render(){
         const { photos, album, users, currentUser } = this.props;
-
-        debugger
         
+
         if (album) {
             const style = {
                 backgroundImage: 'url(' + photos[album.photo_ids[0]].pictureUrl + ')'
             }
-        }
 
-        let numPhotos;
+            let numPhotos;
 
-        if (album.photos.length === 1) {
-            numPhotos = "photo";
-        } else {
-            numPhotos = "photos";
-        }
+            if (album.photos.length === 1) {
+                numPhotos = "photo";
+            } else {
+                numPhotos = "photos";
+            }
 
-        let description;
-        if (album.description === null) {
-            description = "No description";
-        } else {
-            description = album.description
-        }
+            let description;
+            if (album.description === null) {
+                description = "No description";
+            } else {
+                description = album.description
+            }
 
-        return (
-            <div className="show-album-container">
-                <div className="album-info" style={style}>
+
+
+            return (
+                <div className="show-album-container">
+                    <div className="album-info" style={style} >
                         <div className="dim">
                             <div className="album-info-head">
                                 <h3>{album.name}</h3>
@@ -55,8 +56,23 @@ class AlbumShow extends React.Component {
                             </div>
                         </div>
                     </div> 
-            </div>
-        )
+                    <div className="outter-photo-container-2">
+            
+               
+
+                            {album.photos.map(photo => <AlbumShowItem key={photo.id} photo={photo} photos={this.props.photos} username={currentUser.username} albumId={album.id} />)}
+
+                         
+                    <div/>
+                    </div>
+                    <div className="space"/>
+                </div>
+            );
+        } else {
+            return (
+                <p>loading album</p>
+            );
+        }
 
     }
 }
