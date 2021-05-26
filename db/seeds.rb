@@ -86,8 +86,8 @@ ericIcecream.picture.attach(io: open("https://dreamer-seed.s3.amazonaws.com/drea
 
 
 
-demo_user = User.create(username: "Andy", email: "andy@email.com", password: "password")
+# demo_user = User.create(username: "Andy", email: "andy@email.com", password: "password")
 
-file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
+# file = open('https://<your_bucket>.<your_region>.amazonaws.com/<optional_folder_name>/<some_file>.jpg')
 
-demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
+# demo_user.avatar.attach(io: file, filename: 'some_file.jpg')
