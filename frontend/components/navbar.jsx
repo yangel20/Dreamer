@@ -16,18 +16,21 @@ const navbar = ({ currentUser, logout }) => {
   );
   const navLoggedIn = () => (
     <nav className="logged-in-nav">
-      <Link className="DreamerLogo" to="/explore"> <BsCloudFill size="25"/> Dreamer </Link>
-      <div className="dropdown">
-        <button className="drop-down-btn" >you</button>
-        <div className="drop-down-content">
-          <Link to={`/users/${currentUser.id}`}>Photostream</Link>
-          <Link to={`/users/${currentUser.id}/albums`}>Album</Link>
-
+      <div className="logo-dropdown-container" >
+        <Link className="DreamerLogo" to="/explore"> <BsCloudFill size="25"/> Dreamer </Link>
+        <div className="dropdown">
+          <button className="drop-down-btn" >You</button>
+          <div className="drop-down-content">
+            <Link to={`/users/${currentUser.id}`}>Photostream</Link>
+            <Link to={`/users/${currentUser.id}/albums`}>Album</Link>
+          </div>
         </div>
+          <Link className="nav-explore" to="/explore">Explore</Link>
       </div>
-      <h2 className="header-name">Hello, {currentUser.username}!</h2>
-      <Link className="link-to-upload" to="/upload" ><BsCloudUpload size="30" /></Link>
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <div className="logout-upload-container">
+        <Link className="link-to-upload" to="/upload" ><BsCloudUpload size="30" /></Link>
+        <Link className="header-button" to="/upload" onClick={logout}>Log Out</Link>
+      </div>
     </nav>
   );
 

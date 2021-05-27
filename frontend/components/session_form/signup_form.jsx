@@ -1,4 +1,6 @@
 import React from 'react';
+import { BsCloudFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import { IconContext } from 'react-icons/lib';
 
 class SignupForm
@@ -42,7 +44,7 @@ class SignupForm
       <>
         <div className="session-form-container">
           <form onSubmit={this.handleSubmit} className="session-form-box">
-            
+            < BsCloudFill size="30" className="cloud-sessiom" />
             <div className="session-title">Sign up to view dreams</div>
             <br/>
             {this.renderErrors()}
@@ -77,6 +79,8 @@ class SignupForm
               <br/>
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
+            <div className="line"/>
+            <div className="sign-up-link">Already a Flickr member? &nbsp; <Link to="/login" >Log in here.</Link> </div>
           </form>
         </div>
         <div className="session-bg"></div>

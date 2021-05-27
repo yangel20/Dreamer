@@ -9,6 +9,7 @@ require 'open-uri'
 
 User.destroy_all
 Photo.destroy_all
+Tag.destroy_all
 
 
 
@@ -21,6 +22,10 @@ jessica = User.create!(username:"jessica", password:"password", email:"jessica@a
 eric = User.create!(username:"eric", password:"password", email:"eric@aa.com")
 #--------------------------------------------------------------------------------------------------------------------
 demoNightmare = Photo.create!(title:"nightmare", description:"I had crazy nightmare", user_id: demo.id)
+demo2 = Photo.create!(title:"Dreaming", description:"looking at my self", user_id: demo.id)
+demo3 = Photo.create!(title:"Time?", description:"Does time really exist?", user_id: demo.id)
+demo4 = Photo.create!(title:"serious", description:"are my dreams telling me something?", user_id: demo.id)
+
 
 johnPhoto = Photo.create!(title:"my favorite photo", description:"I hope you enjoy this", user_id: john.id)
 johnMountain = Photo.create!(title:"the highest peek", description:"I had a dream in which I reached the top, and it was lonely.", user_id: john.id)
@@ -43,25 +48,100 @@ ericIcecream = Photo.create!(title:"my sweet desire", description:"I dreamt of e
 
 # demo
 demoNightmare.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/elm_street.jpg"), filename: "elm_street.jpg")
+#tag
+tag_1 = Tag.create!(photo_id: demoNightmare.id, name: "Nightmare")
+tag_2 = Tag.create!(photo_id: demoNightmare.id, name: "Movie")
+tag_3 = Tag.create!(photo_id: demoNightmare.id, name: "Scary")
+
+demo2.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/demo_2.jpeg"), filename: "demo_2.jpeg")
+#tag
+tag_4 = Tag.create!(photo_id: demo2.id, name: "Dream")
+
+demo3.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/demo_3.jpeg"), filename: "demo_3.jpeg")
+#tag
+tag_5 = Tag.create!(photo_id: demo3.id, name: "Dream")
+tag_6 = Tag.create!(photo_id: demo3.id, name: "Time")
+
+demo4.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/demo_4.jpeg"), filename: "demo_4.jpeg")
+#tag
+tag_7 = Tag.create!(photo_id: demo4.id, name: "Nightmare")
+tag_8 = Tag.create!(photo_id: demo4.id, name: "Scary")
+
 
 # john
 johnPhoto.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/johnfav.jpg"), filename: "johnfav.jpg")
+#tag
+tag_9 = Tag.create!(photo_id: johnPhoto.id, name: "Beach")
+tag_10 = Tag.create!(photo_id: johnPhoto.id, name: "Relaxing")
+tag_11 = Tag.create!(photo_id: johnPhoto.id, name: "Dream")
+
 johnMountain.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_mountain.jpg"), filename: "john_mountain.jpg")
+#tag
+tag_12 = Tag.create!(photo_id: johnMountain.id, name: "Relaxing")
+tag_13 = Tag.create!(photo_id: johnMountain.id, name: "Heights")
+tag_14 = Tag.create!(photo_id: johnMountain.id, name: "Dream")
+
+
 johnDominicanrepublic.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_dominican_republic.jpg"), filename: "john_dominican_republic.jpg")
+#tag
+tag_15 = Tag.create!(photo_id: johnDominicanrepublic.id, name: "Caribbean")
+tag_16 = Tag.create!(photo_id: johnDominicanrepublic.id, name: "Fruits")
+
 johnHotAirBalloon.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_hot_air_balloon.jpg"), filename: "john_hot_air_balloon.jpg")
+#tag
+tag_17 = Tag.create!(photo_id: johnHotAirBalloon.id, name: "Heights")
+tag_18 = Tag.create!(photo_id: johnHotAirBalloon.id, name: "Views")
+
 johnTree.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/john_tree.jpg"), filename: "john_tree.jpg")
+#tag
+tag_19 = Tag.create!(photo_id: johnTree.id, name: "Tree")
+tag_20 = Tag.create!(photo_id: johnTree.id, name: "Abstract")
+tag_21 = Tag.create!(photo_id: johnTree.id, name: "MoMa")
 
 #jessica
 jessicaPhoto.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_Nightmare.jpg"), filename: "jessica_Nightmare.jpg")
+#tag
+tag_22 = Tag.create!(photo_id: jessicaPhoto.id, name: "Nightmare")
+tag_23 = Tag.create!(photo_id: jessicaPhoto.id, name: "Scary")
+tag_24 = Tag.create!(photo_id: jessicaPhoto.id, name: "Movie")
+
 jessicaDreamCatcher.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dream_catcher.jpeg"), filename: "jessica_dream_catcher.jpeg")
+#tag
+tag_25 = Tag.create!(photo_id: jessicaDreamCatcher.id, name: "Dream")
+
 jessicaFood.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_food.jpg"), filename: "jessica_food.jpg")
+#tag
+tag_26 = Tag.create!(photo_id: jessicaFood.id, name: "Food")
+tag_27 = Tag.create!(photo_id: jessicaFood.id, name: "Yumm")
+
 jessicaDancing.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_dancing.jpg"), filename: "jessica_dancing.jpg")
+#tag
+tag_28 = Tag.create!(photo_id: jessicaDancing.id, name: "Dancing")
+tag_29 = Tag.create!(photo_id: jessicaDancing.id, name: "Fun")
+
 jessicaVangogh.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/jessica_van_gogh.jpg"), filename: "jessica_van_gogh.jpg")
+#tag
+tag_30 = Tag.create!(photo_id: jessicaVangogh.id, name: "Abstract")
+tag_31 = Tag.create!(photo_id: jessicaVangogh.id, name: "MoMA")
 
 #eric
 ericPhoto.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_happy_place.jpg"), filename: "eric_happy_place.jpg")
+#tag
+tag_32 = Tag.create!(photo_id: ericPhoto.id, name: "Dream")
+
 ericConcert.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_concert.jpg"), filename: "eric_concert.jpg")
+#tag
+tag_33 = Tag.create!(photo_id: ericConcert.id, name: "Party")
+tag_34 = Tag.create!(photo_id: ericConcert.id, name: "Fun")
+
 ericIcecream.picture.attach(io: URI.open("https://dreamer-seed.s3.amazonaws.com/dreamer_photos/eric_icecream.jpg"), filename: "eric_icecream.jpg")
+tag_35 = Tag.create!(photo_id: ericIcecream.id, name: "Food")
+tag_36 = Tag.create!(photo_id: ericIcecream.id, name: "Yumm")
+
+
+
+
+
 
 #production bucket-----
 # # #john

@@ -1,52 +1,84 @@
 .session-form-container {
-    display: flex;
-    justify-content: center;
-    // justify-content: space-around;
-    width: 20rem;
-    height: 400px;
-    background-color: rgb(255, 255, 255);
-    padding: 0px;
-    border-radius: .25rem;
-    position: absolute;
-    left: 39%;
-    top: 13%;
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  padding: 0px;
+  border-radius: .25rem;
+  position: absolute;
+  left: 39%;
+  top: 13%;
+}
+
+
+.session-submit{
+  color: white;
+  background-color: rgb(60, 136, 204);
+  border-radius: .25rem;
+  border: none;
+  width: 230px;
+  font-weight: 600;
+  line-height: 20.8px;
+  margin-top: 32px;
+  font-size: 16px;
+  min-height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cloud-sessiom{
+  width: 100%;
+  color: gray;
+  padding-top: 1.5rem;
+}
+
+.session-input{
+  width: 230px;
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 1rem 1rem .45rem 1rem ;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+
+}
+
+.session-input:focus{
+  border: 1.5px solid #3c88cc
+}
+
+.session-title{
+  font-size: 20px;
+  margin-top: 10px;
+  display: flex;
+  color: #212124;
+  justify-content: center;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.line{
+  height: 0.0625rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  color: #212124;
+  font-family: Proxima Nova,Helvetica,sans-serif;
+  line-height: 1.3;
+  background-color: #e3e3e3;
+}
+
+.sign-up-link{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: .875rem;
+  a {
+    text-decoration: none;
+    color: rgb(60, 136, 204);
+
   }
+}
 
 
-  .session-submit{
-    color: white;
-    background-color: rgb(60, 136, 204);
-    border-radius: .25rem;
-    border: none;
-    width: 230px;
-    font-weight: 600;
-    line-height: 20.8px;
-    margin-top: 32px;
-    font-size: 16px;
-    min-height: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .session-input{
-    width: 230px;
-    font-size: 16px;
-    padding: 1rem 1rem .45rem 1rem ;
-    box-sizing: border-box;
-    align-items: center;
-    display: flex;
-
-
-  }
-
-  .session-input:focus{
-    border-color: #3c88cc;
-    border-width: 2px;
-  }
-
-  .session-title{
-    font-size: 20px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    font-family: Arial, Helvetica, sans-serif;
-  }

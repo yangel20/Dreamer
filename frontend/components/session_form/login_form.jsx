@@ -1,4 +1,6 @@
 import React from 'react';
+import { BsCloudFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component {
   constructor(props) {
@@ -39,7 +41,8 @@ class Login extends React.Component {
       <>
         <div className="session-form-container">
             <form onSubmit={this.handleSubmit} className="session-form-box">
-              <h4 className="session-title">Welcome to Dreamer!</h4>
+              < BsCloudFill size="30" className="cloud-sessiom" />
+              <h4 className="session-title">Welcome to Dreamer</h4>
               <br/>
               {this.renderErrors()}
               <div className="session-form">
@@ -64,6 +67,8 @@ class Login extends React.Component {
                 <br/>
                 <input className="session-submit" type="submit" value={this.props.formType} />
               </div>
+              <div className="line"/>
+              <div className="sign-up-link">Not a Dreamer member? &nbsp;<Link to="/signup" >Sign up here.</Link> </div>
             </form>
         </div>
         <div className="session-bg"></div>
