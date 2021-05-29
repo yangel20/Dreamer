@@ -62,7 +62,8 @@ class UserShow extends React.Component {
                 display = (
                     <div className="albums-body">
                         <div className="albums-toolbar">
-                            <Link to="/photos/organize/new_set">
+                            <Link className="link-to-new-album" to="/photos/organize/new_set">
+                                <i className="img-new-album"></i>
                                 <p>New album</p>
                             </Link>
                         </div>

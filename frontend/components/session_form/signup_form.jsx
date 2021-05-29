@@ -31,7 +31,7 @@ class SignupForm
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -47,7 +47,6 @@ class SignupForm
             < BsCloudFill size="30" className="cloud-sessiom" />
             <div className="session-title">Sign up to view dreams</div>
             <br/>
-            {this.renderErrors()}
             <div className="session-form">
               <br/>
               <label className="Email">
@@ -77,10 +76,11 @@ class SignupForm
                 />
               </label>
               <br/>
+              {this.renderErrors()}
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
             <div className="line"/>
-            <div className="sign-up-link">Already a Flickr member? &nbsp; <Link to="/login" >Log in here.</Link> </div>
+            <div className="sign-up-link">Already a Dreamer member? &nbsp; <Link to="/login" >Log in here.</Link> </div>
           </form>
         </div>
         <div className="session-bg"></div>

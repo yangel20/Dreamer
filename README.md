@@ -20,9 +20,6 @@ Dreamer is a clone of the photo-sharing platrorm Flick.
 * Deployment instructions
 
 * ...
-change change change
-update
+
 # Dreamer
 git 2.3.5.6
-
-albums!!!!!

@@ -28,7 +28,7 @@ class Login extends React.Component {
     return(
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -44,7 +44,6 @@ class Login extends React.Component {
               < BsCloudFill size="30" className="cloud-sessiom" />
               <h4 className="session-title">Welcome to Dreamer</h4>
               <br/>
-              {this.renderErrors()}
               <div className="session-form">
                 <br/>
                 <label className="Username">
@@ -65,6 +64,7 @@ class Login extends React.Component {
                   />
                 </label>
                 <br/>
+                {this.renderErrors()}
                 <input className="session-submit" type="submit" value={this.props.formType} />
               </div>
               <div className="line"/>
