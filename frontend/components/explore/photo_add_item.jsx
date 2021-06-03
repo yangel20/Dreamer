@@ -27,6 +27,7 @@ class PhotoAddItem extends React.Component {
                 <div>
                     <input 
                         type="text"
+                        placeholder="Add a title"
                         defaultValue={this.state.title}
                         onChange={handleInput(file.index, "titles")}
                     />
