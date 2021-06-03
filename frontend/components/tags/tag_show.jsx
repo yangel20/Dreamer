@@ -14,6 +14,7 @@ class TagShow extends React.Component {
         this.props.fetchAllTags();
     }
 
+
     onlyUnique(val, idx, self) {
         return self.indexOf(val) == idx;
     }
@@ -32,8 +33,9 @@ class TagShow extends React.Component {
                     <h1 className="explore" > Tags <BsCaretRightFill size="15"/> {tagName} </h1>
                     <div className="photo-container">
 
-                        {uniqueTagPhotoIds.map(photoId =>
+                        {uniqueTagPhotoIds.map(photoId => photos[photoId] ?
                         <TagShowItem key={photoId} photo={photos[photoId]} username={users[photos[photoId].user_id].username} tag={tagName}/>
+                        : null
                         )}
                     </div>
                     <div className="space" />

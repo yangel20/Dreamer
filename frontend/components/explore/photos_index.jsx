@@ -15,6 +15,7 @@ class PhotoIndex extends React.Component {
     }
 
 
+
     render(){
 
         const { photos, users } = this.props;
@@ -24,9 +25,10 @@ class PhotoIndex extends React.Component {
                 <h1 className="explore" >Explore</h1>
                 <div className="photo-container">
 
-                    {photos.map(photo =>
-                    <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
-                    )}
+                {photos.map(photo => photo.id && photo.pictureUrl !== "" ?
+                <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
+                : null
+                )}
                 </div>
                 <div className="space"/>
             </div>
@@ -35,3 +37,8 @@ class PhotoIndex extends React.Component {
 };
 
 export default PhotoIndex;
+
+// {photos.map(photo => photo.id && photo.pictureUrl !== "" ?
+// <PhotosIndexItem key={photo.id} photo={photo} username={users[photo.user_id].username} />
+// : null
+// )}

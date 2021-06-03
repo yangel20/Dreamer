@@ -28,7 +28,6 @@ class SignupForm
   }
 
   componentWillUnmount(){
-    debugger
     this.props.clearErrors();
   }
 
