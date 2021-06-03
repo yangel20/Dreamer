@@ -5,26 +5,20 @@ export const RECEIVE_ALL_PHOTOS = "RECEIVE_ALL_PHOTOS";
 export const CREATE_PHOTO = "CREATE_PHOTO";
 export const DELETE_PHOTO = "DELETE_PHOTO";
 
-export const receivePhoto = (photo) => ({
+const receivePhoto = (photo) => ({
   
     type: RECEIVE_PHOTO,
     photo
 });
 
-export const receiveAllPhotos = ({photos, users}) => ({
+const receiveAllPhotos = ({photos, users}) => ({
    
     type: RECEIVE_ALL_PHOTOS,
     photos: photos,
     users: users
 });
 
-export const createAPhoto = ({photo}) =>({
-
-    type: CREATE_PHOTO,
-    photo
-});
-
-export const deleteAPhoto = (photoId) => ({
+const deleteAPhoto = (photoId) => ({
     type: DELETE_PHOTO,
     photoId
 });
@@ -52,7 +46,7 @@ export const fetchPhoto = photoId => dispatch => (
 
 export const deletePhoto = photoId => dispatch => (
     photos_util.deletePhoto(photoId).then(() => ( 
-       dispatch(deletePhoto(photoId))
+       dispatch(deleteAPhoto(photoId))
        ))
 );
 

@@ -15,11 +15,6 @@ class PhotoIndex extends React.Component {
     }
 
 
-    componentDidUpdate(){
-        this.props.fetchAllPhotos();
-        this.props.fetchAllUsers();
-    }
-
     render(){
 
         const { photos, users } = this.props;

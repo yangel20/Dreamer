@@ -27,6 +27,11 @@ class SignupForm
     this.props.processForm(user);
   }
 
+  componentWillUnmount(){
+    debugger
+    this.props.clearErrors();
+  }
+
   renderErrors() {
     return(
       <ul>
