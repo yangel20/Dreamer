@@ -20,15 +20,17 @@ class PhotoAdd extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
+    
 
-    deleteThumbnail(){
-        const ns = Object.assign({}, this.state);
-        const index = this.state.selected;
-        delete ns.files[index];
-        delete ns.titles[index];
-        delete ns.descriptions[index];
-        ns.selected = null;
-        this.setState(ns);
+    select(id) {
+        return (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const image = document.getElementsByClassName(`thumbnail-${id}`);
+            this.deselect(e);
+            image[0].classList.add("selected-thumbnail");
+            this.setState({ selected: id });
+        };
     }
 
     deselect(e) {
@@ -40,16 +42,15 @@ class PhotoAdd extends React.Component {
         });
         this.setState({ selected: null });
     }
-
-    select(id) {
-        return (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            const image = document.getElementsByClassName(`thumbnail-${id}`);
-            this.deselect(e);
-            image[0].classList.add("selected-thumbnail");
-            this.setState({ selected: id });
-        };
+    
+    deleteThumbnail(){
+        const ns = Object.assign({}, this.state);
+        const index = this.state.selected;
+        delete ns.files[index];
+        delete ns.titles[index];
+        delete ns.descriptions[index];
+        ns.selected = null;
+        this.setState(ns);
     }
 
     handleInput(id, field) {
@@ -155,7 +156,6 @@ class PhotoAdd extends React.Component {
                     <div>
                         <button className="nav-btn-upload">
                             <label htmlFor="nav-btn-upload">
-
                                 <FcAddImage size="23" /> ADD
                             </label>
                             <input className="nav-btn-upload-input" id="nav-btn-upload" type="file"  multiple onChange={this.handleFile} />
