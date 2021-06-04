@@ -68,7 +68,7 @@ Users can also attach tags to their own photos and make albums. so they can shar
 </dl>
 
 
-<img src="app/assets/images/splash-final-v.gif"/>
+<img src="app/assets/images/splash-gif.gif"/>
 
 
 For a deeper breakdown of the project's MVP, Routes and Schema; visit the [Wiki Page](https://github.com/yangel20/Dreamer/wiki)
