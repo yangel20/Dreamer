@@ -4,6 +4,13 @@
     <title>Dreamer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="Dreamer" />
+    <meta property='og:image' content="<%= image_url('splash-gif.gif') %>"/>
+    <meta property="og:description"
+      content="Dreamer is a Full Stack clone of the website Flickr, using React and Redux on the front end  and Ruby on Rails on the backend."/>
+    <meta property="og:url"
+      content="http://dreamer-heroku.herokuapp.com/#/"
+    />
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
