@@ -19,7 +19,7 @@ class Splash extends React.Component {
     <>  
       <form className="splash-page" onSubmit={this.handleSubmit} >
           <h1 className="splash-header">Find Your Dreams</h1>
-          <h3 className="splash-h3">Join the Dreamers community, home to a place where peaple share their Dreams.</h3>
+          <h3 className="splash-h3">Join the Dreamers community, home to a place where people share their Dreams.</h3>
           <button className="demo-button" >demo</button>
       </form>
       <div className="slide-background"></div>
